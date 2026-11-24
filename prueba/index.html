@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-IQ2kueKtNVS2LU4ZAjm0FBsTg5aQ9Fz7mCDFScqbr1s=' 'sha256-dw1uxgRcS7+bkb/+11OJlBRGFjF0VdEbdywexqNpk3I=' 'sha256-/7mh9uANfbwaULRQp69HqmA2qiHg6ni6pOPE1YPyx04=' 'sha256-de7xZmIzzNn7Gm+DnB0hMJ1ml3HNUNAe+O0Meazq0uo=' 'sha256-b9eYWJTU7H1I2nIj/lNc8KlgRsdVGM7ciUWhvGm4ORg=' 'sha256-LDIVCCNI1iOKMds9eI4OGewL9CRsDmlD/WxLiLQ1500=' 'sha256-abK55d/R+P1FTzcOKRTBCNhMSbF6nq3nhZa/turmWdM='; style-src 'sha256-qlQs101xSgf65VC5DkST3XG5X8C41dlvh4plHX7ipC4='; img-src data: blob:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-E7sH0E1h4m1YVK0jZ6cuLVAAcvtTiI/ATUXQR3zh52Y=' 'sha256-Yyal3ErZakAhycUjFcEtRmNEDM4KmB0mXHQoCQCnOV0=' 'sha256-/7mh9uANfbwaULRQp69HqmA2qiHg6ni6pOPE1YPyx04=' 'sha256-de7xZmIzzNn7Gm+DnB0hMJ1ml3HNUNAe+O0Meazq0uo=' 'sha256-b9eYWJTU7H1I2nIj/lNc8KlgRsdVGM7ciUWhvGm4ORg=' 'sha256-JRR9KHPdws0k1H+S9Ps9itk32BjQ/fDmA94qo4AqX4w=' 'sha256-abK55d/R+P1FTzcOKRTBCNhMSbF6nq3nhZa/turmWdM='; style-src 'sha256-qlQs101xSgf65VC5DkST3XG5X8C41dlvh4plHX7ipC4='; img-src data: blob:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="referrer" content="no-referrer">
@@ -162,7 +162,7 @@
 <div id="app" aria-live="polite"><div class="cargando">Abriendo…<div class="ruedita"></div></div></div>
 <noscript><div class="cargando">Este celular no puede abrir esta página.</div></noscript>
 <script>
-window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNVYbdDa4xQlt-u5iZU83wx3KuFa3QqN4nHtS-2urWLIukamuOGDE7wGpRzecQ/exec"};
+window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNVYbdDa4xQlt-u5iZU83wx3KuFa3QqN4nHtS-2urWLIukamuOGDE7wGpRzecQ/exec","entorno":"prueba","clavesViejas":true};
 </script>
 <script>
 /*
@@ -181,16 +181,81 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
  * es de esa visita: va a sessionStorage. Si este navegador no deja guardar (modo privado, sin
  * lugar), el fragmento NO se borra de la barra: si se borrara, al recargar no habría con qué entrar.
  *
- * window.CampoPagina = { parametros() -> {t, admin, accion}, olvidar(), guardado: bool }
+ * SEPARADO POR ENTORNO. Prueba y real viven en la misma dirección (distinta carpeta), y lo guardado
+ * en el navegador es por dirección, no por carpeta. Por eso TODO lo que guarda la página (el token,
+ * la cola de pendientes, la última apertura, la acción) lleva al final el nombre del entorno que
+ * embebe el generador: 'campo_cola_v1' -> 'campo_cola_v1.prueba'. Así una carga pendiente de prueba
+ * nunca se manda al real ni al revés. CampoPagina.clave(base) da el nombre con el sufijo; cliente.html
+ * la usa si existe. En la web app de Apps Script no hay CampoPagina: las claves quedan como siempre.
+ *
+ * Herencia: antes de separar, la página de prueba guardaba con las claves sin sufijo. Solo el entorno
+ * que el generador marca con `clavesViejas: true` las adopta: copia cada una a su clave nueva, verifica
+ * y borra la vieja. Si ya había clave nueva, manda la nueva (la cola se une por id_envio, para no
+ * perder una carga que una pestaña vieja haya dejado con el código anterior). Un entorno sin esa
+ * marca ni las lee.
+ *
+ * window.CampoPagina = { parametros() -> {t, admin, accion}, olvidar(), guardado: bool, clave(base), entorno }
  */
 (function () {
   'use strict';
-  var LLAVE = 'campo_llave_v1';
-  var ACCION = 'campo_accion_v1';
+  var CONF = window.CAMPO_PAGINA || {};
   var MAX = 200;
+
+  /** Sufijo del entorno: el nombre que embebe el generador; si faltara, uno fijo sacado de la dirección del sistema. */
+  function sufijoEntorno() {
+    if (typeof CONF.entorno === 'string' && /^[a-z0-9_-]{1,40}$/i.test(CONF.entorno)) return CONF.entorno;
+    var s = String(CONF.api || ''), h = 5381;
+    if (!s) return '';
+    for (var i = 0; i < s.length; i++) h = ((h * 33) ^ s.charCodeAt(i)) >>> 0;
+    return 'u' + h.toString(36);
+  }
+  var SUFIJO = sufijoEntorno();
+  function clave(base) { return SUFIJO ? base + '.' + SUFIJO : base; }
+
+  var VIEJAS = { llave: 'campo_llave_v1', accion: 'campo_accion_v1', cola: 'campo_cola_v1', ini: 'campo_ini_v1' };
+  var LLAVE = clave(VIEJAS.llave);
+  var ACCION = clave(VIEJAS.accion);
 
   function local() { try { return window.localStorage; } catch (e) { return null; } }
   function sesion() { try { return window.sessionStorage; } catch (e) { return null; } }
+
+  /** Une dos colas (texto JSON) por id_envio: primero la nueva, después lo de la vieja que no esté. */
+  function unirColas(nueva, vieja) {
+    var a, b;
+    try { a = JSON.parse(nueva); } catch (e) { a = null; }
+    try { b = JSON.parse(vieja); } catch (e) { b = null; }
+    if (!Array.isArray(a)) a = [];
+    if (!Array.isArray(b)) return JSON.stringify(a);
+    var ya = {};
+    a.forEach(function (x) { if (x && x.id_envio) ya[x.id_envio] = true; });
+    b.forEach(function (x) { if (x && x.id_envio && !ya[x.id_envio]) { ya[x.id_envio] = true; a.push(x); } });
+    return JSON.stringify(a);
+  }
+  /** Pasa la clave vieja a la nueva sin perder nada: si no se pudo escribir la nueva, la vieja queda. */
+  function heredar(st, vieja, nueva, esCola) {
+    try {
+      if (!st || vieja === nueva) return;
+      var v = st.getItem(vieja);
+      if (v === null || v === undefined) return;
+      var n = st.getItem(nueva);
+      var valor = n === null || n === undefined ? v : (esCola ? unirColas(n, v) : n);
+      if (valor !== n) {
+        try { st.setItem(nueva, valor); } catch (e) {
+          // Sin lugar: se libera la vieja y se reintenta; si tampoco, se repone la vieja tal cual.
+          st.removeItem(vieja);
+          try { st.setItem(nueva, valor); } catch (e2) { try { st.setItem(vieja, v); } catch (e3) { /* nada */ } return; }
+        }
+        if (st.getItem(nueva) !== valor) return;
+      }
+      st.removeItem(vieja);
+    } catch (e) { /* nada: la vieja queda para la próxima */ }
+  }
+  if (CONF.clavesViejas === true && SUFIJO) {
+    heredar(local(), VIEJAS.llave, LLAVE, false);
+    heredar(local(), VIEJAS.ini, clave(VIEJAS.ini), false);
+    heredar(local(), VIEJAS.cola, clave(VIEJAS.cola), true);
+    heredar(sesion(), VIEJAS.accion, ACCION, false);
+  }
   function leerJSON(st, k) { try { var t = st && st.getItem(k); return t ? JSON.parse(t) : null; } catch (e) { return null; } }
   function poner(st, k, v) {
     try {
@@ -260,7 +325,10 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
     },
     /** El sistema dijo que el link no sirve: se borra del celular (la próxima vez pide el link). */
     olvidar: function () { sacar(local(), LLAVE); sacar(sesion(), ACCION); actual = null; },
-    deFragmento: deFragmento
+    deFragmento: deFragmento,
+    /** Nombre con que se guarda algo en el navegador, separado por entorno. */
+    clave: clave,
+    entorno: SUFIJO
   };
 })();
 </script>
@@ -1005,8 +1073,14 @@ var Transporte = (function () {
 (function () {
   'use strict';
 
-  var CLAVE_COLA = 'campo_cola_v1';
-  var CLAVE_INI = 'campo_ini_v1';
+  // En la página estática cada entorno guarda aparte (CampoPagina.clave le agrega el entorno: ver
+  // pagina.html). En la web app de Apps Script no hay CampoPagina y las claves son las de siempre.
+  function claveDisco(base) {
+    try { if (window.CampoPagina && typeof window.CampoPagina.clave === 'function') return window.CampoPagina.clave(base); } catch (e) { /* sigue */ }
+    return base;
+  }
+  var CLAVE_COLA = claveDisco('campo_cola_v1');
+  var CLAVE_INI = claveDisco('campo_ini_v1');
   var ESPERA = { iniciar: 30000, enviar: 45000, revisarRenglon: 12000, ultimas: 30000, pedirAnulacion: 30000 };
   var MSG_FALLA = 'Algo falló al guardar. No se perdió nada: probá de nuevo en un ratito.';
   var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -1137,7 +1211,7 @@ var Transporte = (function () {
   // ================================================================ guardado en el celular
   var Disco = {
     ok: (function () {
-      try { var k = '__prueba_campo'; window.localStorage.setItem(k, '1'); window.localStorage.removeItem(k); return true; } catch (e) { return false; }
+      try { var k = claveDisco('__prueba_campo'); window.localStorage.setItem(k, '1'); window.localStorage.removeItem(k); return true; } catch (e) { return false; }
     })(),
     leer: function (clave) {
       if (!this.ok) return null;

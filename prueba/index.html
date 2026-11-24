@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-E7sH0E1h4m1YVK0jZ6cuLVAAcvtTiI/ATUXQR3zh52Y=' 'sha256-Yyal3ErZakAhycUjFcEtRmNEDM4KmB0mXHQoCQCnOV0=' 'sha256-/7mh9uANfbwaULRQp69HqmA2qiHg6ni6pOPE1YPyx04=' 'sha256-de7xZmIzzNn7Gm+DnB0hMJ1ml3HNUNAe+O0Meazq0uo=' 'sha256-b9eYWJTU7H1I2nIj/lNc8KlgRsdVGM7ciUWhvGm4ORg=' 'sha256-JRR9KHPdws0k1H+S9Ps9itk32BjQ/fDmA94qo4AqX4w=' 'sha256-abK55d/R+P1FTzcOKRTBCNhMSbF6nq3nhZa/turmWdM='; style-src 'sha256-qlQs101xSgf65VC5DkST3XG5X8C41dlvh4plHX7ipC4='; img-src data: blob:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KkhcBVhtq20jlKfb+hNiEYO/kgjIHz8N2FIIpMLSudw=' 'sha256-QxjoYNKekV3fJ4xUvzcVoZTfMFZ5/mt7ef5j6vBjEKY=' 'sha256-Zf+AS0ibDnjDfLkG6SFcBfUYB31PImaB2a5GmGYDjJg=' 'sha256-m3oaO22oU+ldFF4g9T014LcG+s9PUCFGMmYkSiggQCQ=' 'sha256-qDQlADqrYejUnyvQ2hQC/9dQpkVrcDjWUzud3cBvUvA=' 'sha256-N6GH/LBBzts8cUt28mShcBhpKf1xcwz2JjTq7I9iiJc=' 'sha256-6DjQAYoaziZorEy0C6L1HCNn0NDXQ0fXeGwX3pFrj8E='; style-src 'sha256-1xR3BbG9f/fiXHPXWEMG8wbuSvicxDc2I4PQXWDcdFs='; img-src data: blob:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="referrer" content="no-referrer">
@@ -10,14 +10,12 @@
 <meta name="format-detection" content="telephone=no">
 <title>Inicio</title>
 <style>
-  /* App de campo: pensada para usar al sol, con los dedos sucios y sin experiencia.
-     Fondo claro, texto casi negro, nada gris tenue, zonas para tocar de 60 px o más. */
   :root {
     --texto: #111111;
     --fondo: #ffffff;
     --borde: #1a1a1a;
-    --primario: #0b3d91;     /* Siguiente */
-    --verde: #0f6b2f;        /* Está bien, confirmación */
+    --primario: #0b3d91;
+    --verde: #0f6b2f;
     --verde-claro: #e3f5e8;
     --rojo: #a4001d;
     --rojo-claro: #fde8eb;
@@ -48,7 +46,6 @@
   .acciones .boton { margin: 0; }
   .acciones .atras { flex: 0 0 38%; }
   .acciones .siguiente, .acciones .ok { flex: 1; }
-
   h1, .pregunta { font-size: 29px; line-height: 1.2; margin: 4px 0 18px; font-weight: 800; }
   h2 { font-size: 24px; margin: 18px 0 10px; }
   p { margin: 10px 0; }
@@ -56,7 +53,6 @@
   .enorme { font-size: 44px; font-weight: 900; line-height: 1.1; word-break: break-word; }
   .chico { font-size: 19px; }
   .centro { text-align: center; }
-
   .boton {
     display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
     min-height: 64px; margin: 0 0 12px; padding: 12px 16px; border-radius: 12px;
@@ -73,7 +69,6 @@
   .boton.secundario { font-weight: 700; font-size: 21px; }
   .boton.blanco { background: #ffffff; color: var(--verde); border-color: #ffffff; }
   .boton.amarillo { background: var(--amarillo); border-color: var(--borde); }
-
   .opcion {
     display: flex; align-items: center; justify-content: space-between; text-align: left;
     width: 100%; min-height: 68px; margin: 0 0 12px; padding: 12px 16px; border-radius: 12px;
@@ -85,7 +80,6 @@
   .opcion.elegida { background: var(--elegida); border-width: 5px; }
   .opcion.elegida .marca { visibility: visible; }
   .opcion.vacia { font-weight: 600; border-style: dashed; }
-
   .inicio-grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
   .inicio-boton {
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
@@ -97,7 +91,6 @@
   .inicio-boton:active { background: var(--elegida); }
   .inicio-grilla.uno { grid-template-columns: 1fr; }
   .inicio-grilla.uno .inicio-boton { min-height: 104px; flex-direction: row; gap: 16px; font-size: 26px; }
-
   .entrada {
     width: 100%; min-height: 72px; padding: 10px 14px; border: 3px solid var(--borde); border-radius: 12px;
     font-size: 34px; font-weight: 800; background: #ffffff;
@@ -108,14 +101,12 @@
   .etiqueta { display: block; font-size: 22px; font-weight: 800; margin: 14px 0 6px; }
   .eco { font-size: 30px; font-weight: 900; margin: 10px 0 4px; min-height: 40px; }
   .ayuda { font-size: 20px; margin: 6px 0 12px; }
-
   .aviso { border: 3px solid var(--borde); border-radius: 12px; padding: 12px 14px; margin: 0 0 14px; font-size: 21px; font-weight: 700; }
   .aviso.error { background: var(--rojo-claro); border-color: var(--rojo); color: #6d0013; }
   .aviso.amarillo { background: var(--amarillo-claro); }
   .aviso.info { background: #eaf1ff; border-color: var(--primario); }
   .aviso.verde { background: var(--verde-claro); border-color: var(--verde); }
   .aviso .boton { margin-top: 10px; margin-bottom: 0; }
-
   .repaso { list-style: none; padding: 0; margin: 0 0 8px; }
   .repaso li { margin: 0 0 8px; }
   .fila-repaso {
@@ -126,7 +117,6 @@
   .fila-repaso .r-etiqueta { display: block; font-size: 19px; font-weight: 700; }
   .fila-repaso .r-valor { display: block; font-size: 26px; font-weight: 900; word-break: break-word; }
   .fila-repaso .r-cambiar { display: block; font-size: 18px; font-weight: 700; color: var(--primario); text-decoration: underline; }
-
   .fondo-verde { background: var(--verde); color: #ffffff; }
   .fondo-verde .cuerpo { color: #ffffff; }
   .fondo-verde .acciones { background: var(--verde); border-top-color: #ffffff; }
@@ -135,7 +125,6 @@
   .fondo-rojo { background: #ffe1e5; }
   .fondo-rojo .acciones { background: #ffe1e5; }
   .marca-grande { font-size: 96px; line-height: 1; text-align: center; margin: 10px 0; font-weight: 900; }
-
   .tarjeta { border: 3px solid var(--borde); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; background: #ffffff; color: var(--texto); }
   .carga-boton { display: block; width: 100%; text-align: left; cursor: pointer; touch-action: manipulation; font-size: 21px; }
   .carga-boton .c-titulo { display: block; font-size: 18px; font-weight: 700; }
@@ -143,7 +132,6 @@
   .carga-boton .c-fecha { display: block; font-size: 18px; font-weight: 600; }
   .sello { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 8px; border: 2px solid var(--borde); font-size: 18px; font-weight: 800; background: var(--amarillo-claro); }
   .sello.anulada { background: var(--rojo-claro); border-color: var(--rojo); }
-
   .cargando { padding: 60px 16px; text-align: center; font-size: 28px; font-weight: 800; }
   .ruedita {
     width: 64px; height: 64px; margin: 24px auto; border-radius: 50%;
@@ -162,46 +150,13 @@
 <div id="app" aria-live="polite"><div class="cargando">Abriendo…<div class="ruedita"></div></div></div>
 <noscript><div class="cargando">Este celular no puede abrir esta página.</div></noscript>
 <script>
-window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNVYbdDa4xQlt-u5iZU83wx3KuFa3QqN4nHtS-2urWLIukamuOGDE7wGpRzecQ/exec","entorno":"prueba","clavesViejas":true};
+window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNVYbdDa4xQlt-u5iZU83wx3KuFa3QqN4nHtS-2urWLIukamuOGDE7wGpRzecQ/exec","entorno":"prueba","clavesViejas":true,"contacto":"Lucas"};
 </script>
 <script>
-/*
- * Arranque de la PÁGINA ESTÁTICA (solo la incluye herramientas/generar_pagina.js; la web app de
- * Apps Script no la usa). Corre antes que cliente.html.
- *
- * La identidad llega en el fragmento del link, nunca en la query:
- *   #t=TOKEN                      app de campo
- *   #admin=TOKEN[&accion=ID]      administración
- * El fragmento no viaja a ningún servidor ni en el Referer. Apenas se lee se borra de la barra
- * (history.replaceState) para que no quede en capturas ni al compartir pantalla.
- *
- * Para que la app siga andando al recargar o desde un ícono en la pantalla de inicio, el token
- * se guarda en el celular, en localStorage (clave LLAVE), igual que hoy ya se guardan ahí la cola
- * de pendientes y la última apertura (que llevan el token). La acción de administración (accion)
- * es de esa visita: va a sessionStorage. Si este navegador no deja guardar (modo privado, sin
- * lugar), el fragmento NO se borra de la barra: si se borrara, al recargar no habría con qué entrar.
- *
- * SEPARADO POR ENTORNO. Prueba y real viven en la misma dirección (distinta carpeta), y lo guardado
- * en el navegador es por dirección, no por carpeta. Por eso TODO lo que guarda la página (el token,
- * la cola de pendientes, la última apertura, la acción) lleva al final el nombre del entorno que
- * embebe el generador: 'campo_cola_v1' -> 'campo_cola_v1.prueba'. Así una carga pendiente de prueba
- * nunca se manda al real ni al revés. CampoPagina.clave(base) da el nombre con el sufijo; cliente.html
- * la usa si existe. En la web app de Apps Script no hay CampoPagina: las claves quedan como siempre.
- *
- * Herencia: antes de separar, la página de prueba guardaba con las claves sin sufijo. Solo el entorno
- * que el generador marca con `clavesViejas: true` las adopta: copia cada una a su clave nueva, verifica
- * y borra la vieja. Si ya había clave nueva, manda la nueva (la cola se une por id_envio, para no
- * perder una carga que una pestaña vieja haya dejado con el código anterior). Un entorno sin esa
- * marca ni las lee.
- *
- * window.CampoPagina = { parametros() -> {t, admin, accion}, olvidar(), guardado: bool, clave(base), entorno }
- */
 (function () {
   'use strict';
   var CONF = window.CAMPO_PAGINA || {};
   var MAX = 200;
-
-  /** Sufijo del entorno: el nombre que embebe el generador; si faltara, uno fijo sacado de la dirección del sistema. */
   function sufijoEntorno() {
     if (typeof CONF.entorno === 'string' && /^[a-z0-9_-]{1,40}$/i.test(CONF.entorno)) return CONF.entorno;
     var s = String(CONF.api || ''), h = 5381;
@@ -211,15 +166,11 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
   }
   var SUFIJO = sufijoEntorno();
   function clave(base) { return SUFIJO ? base + '.' + SUFIJO : base; }
-
   var VIEJAS = { llave: 'campo_llave_v1', accion: 'campo_accion_v1', cola: 'campo_cola_v1', ini: 'campo_ini_v1' };
   var LLAVE = clave(VIEJAS.llave);
   var ACCION = clave(VIEJAS.accion);
-
   function local() { try { return window.localStorage; } catch (e) { return null; } }
   function sesion() { try { return window.sessionStorage; } catch (e) { return null; } }
-
-  /** Une dos colas (texto JSON) por id_envio: primero la nueva, después lo de la vieja que no esté. */
   function unirColas(nueva, vieja) {
     var a, b;
     try { a = JSON.parse(nueva); } catch (e) { a = null; }
@@ -231,7 +182,6 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
     b.forEach(function (x) { if (x && x.id_envio && !ya[x.id_envio]) { ya[x.id_envio] = true; a.push(x); } });
     return JSON.stringify(a);
   }
-  /** Pasa la clave vieja a la nueva sin perder nada: si no se pudo escribir la nueva, la vieja queda. */
   function heredar(st, vieja, nueva, esCola) {
     try {
       if (!st || vieja === nueva) return;
@@ -241,14 +191,13 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
       var valor = n === null || n === undefined ? v : (esCola ? unirColas(n, v) : n);
       if (valor !== n) {
         try { st.setItem(nueva, valor); } catch (e) {
-          // Sin lugar: se libera la vieja y se reintenta; si tampoco, se repone la vieja tal cual.
           st.removeItem(vieja);
-          try { st.setItem(nueva, valor); } catch (e2) { try { st.setItem(vieja, v); } catch (e3) { /* nada */ } return; }
+          try { st.setItem(nueva, valor); } catch (e2) { try { st.setItem(vieja, v); } catch (e3) {   } return; }
         }
         if (st.getItem(nueva) !== valor) return;
       }
       st.removeItem(vieja);
-    } catch (e) { /* nada: la vieja queda para la próxima */ }
+    } catch (e) {   }
   }
   if (CONF.clavesViejas === true && SUFIJO) {
     heredar(local(), VIEJAS.llave, LLAVE, false);
@@ -264,10 +213,8 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
       return st.getItem(k) === JSON.stringify(v);
     } catch (e) { return false; }
   }
-  function sacar(st, k) { try { if (st) st.removeItem(k); } catch (e) { /* nada */ } }
+  function sacar(st, k) { try { if (st) st.removeItem(k); } catch (e) {   } }
   function valido(t) { return typeof t === 'string' && t !== '' && t.length <= MAX && /^[A-Za-z0-9_-]+$/.test(t); }
-
-  /** '#t=ABC' -> {tipo:'campo', token}; '#admin=ABC&accion=x' -> {tipo:'admin', token, accion}; si no, null. */
   function deFragmento(hash) {
     var h = String(hash || '').replace(/^#/, '');
     if (!h) return null;
@@ -281,15 +228,12 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
     });
     if (valido(p.admin)) return { tipo: 'admin', token: p.admin, accion: /^[a-z_]{1,40}$/.test(p.accion || '') ? p.accion : '' };
     if (valido(p.t)) return { tipo: 'campo', token: p.t, accion: '' };
-    return { tipo: 'nada', token: '', accion: '' }; // había fragmento pero sin un token que sirva
+    return { tipo: 'nada', token: '', accion: '' };
   }
-
   function limpiarBarra() {
-    try { window.history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) { /* nada */ }
+    try { window.history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) {   }
   }
-
   var guardado = false;
-  /** Lee el fragmento (si hay), lo guarda y lo borra de la barra. -> true si había fragmento. */
   function tomarFragmento() {
     var f = deFragmento(window.location.hash);
     if (!f) return false;
@@ -300,7 +244,6 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
     if (guardado) limpiarBarra();
     return true;
   }
-
   var actual = null;
   tomarFragmento();
   if (!actual) {
@@ -311,82 +254,60 @@ window.CAMPO_PAGINA = {"api":"https://script.google.com/macros/s/AKfycbzOctRuHNV
       guardado = true;
     }
   }
-
-  // Si pegan otro link en la misma pestaña solo cambia el fragmento (no se recarga): se toma y se recarga.
   window.addEventListener('hashchange', function () {
-    if (tomarFragmento()) { try { window.location.reload(); } catch (e) { /* nada */ } }
+    if (tomarFragmento()) { try { window.location.reload(); } catch (e) {   } }
   });
-
   window.CampoPagina = {
     guardado: guardado,
     parametros: function () {
       if (!actual || !actual.token) return {};
       return actual.tipo === 'admin' ? { admin: actual.token, accion: actual.accion || '' } : { t: actual.token };
     },
-    /** El sistema dijo que el link no sirve: se borra del celular (la próxima vez pide el link). */
     olvidar: function () { sacar(local(), LLAVE); sacar(sesion(), ACCION); actual = null; },
     deFragmento: deFragmento,
-    /** Nombre con que se guarda algo en el navegador, separado por entorno. */
     clave: clave,
     entorno: SUFIJO
   };
 })();
 </script>
 <script>
-/* GENERADO por herramientas/generar_js_html.js desde src/logica/util.js. NO EDITAR A MANO. */
-/**
- * Utilidades puras compartidas. Lo mantiene el director: si necesitás algo
- * nuevo acá, pedilo (o resolvelo dentro de tu módulo).
- */
 var Util = (function () {
   'use strict';
-
-  var DESFASE_MIN = -180; // America/Argentina/Cordoba: UTC−3 todo el año
-
+  var DESFASE_MIN = -180;
   function dos(n) { return (n < 10 ? '0' : '') + n; }
-
-  /** Date -> 'aaaa-mm-dd' en hora de Córdoba. */
   function fechaISO(d) {
     var l = new Date(d.getTime() + DESFASE_MIN * 60000);
     return l.getUTCFullYear() + '-' + dos(l.getUTCMonth() + 1) + '-' + dos(l.getUTCDate());
   }
-  /** Date -> 'aaaa-mm-ddThh:mm:ss-03:00' en hora de Córdoba. */
   function fechaHoraISO(d) {
     var l = new Date(d.getTime() + DESFASE_MIN * 60000);
     return fechaISO(d) + 'T' + dos(l.getUTCHours()) + ':' + dos(l.getUTCMinutes()) + ':' + dos(l.getUTCSeconds()) + '-03:00';
   }
-  /** ¿Es un texto 'aaaa-mm-dd' de una fecha que existe? */
   function esFechaISO(s) {
     if (typeof s !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
     var p = s.split('-');
     var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
     return d.getUTCFullYear() === +p[0] && d.getUTCMonth() === +p[1] - 1 && d.getUTCDate() === +p[2];
   }
-  /** Días de `desde` a `hasta` (ambos 'aaaa-mm-dd'; acepta fecha-hora ISO). Positivo si hasta es posterior. */
   function diasEntre(desde, hasta) {
     var a = String(desde).slice(0, 10).split('-'), b = String(hasta).slice(0, 10).split('-');
     return Math.round((Date.UTC(+b[0], +b[1] - 1, +b[2]) - Date.UTC(+a[0], +a[1] - 1, +a[2])) / 86400000);
   }
-  /** Suma días a una fecha 'aaaa-mm-dd'. */
   function sumarDias(iso, dias) {
     var p = iso.split('-');
     var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + dias));
     return d.getUTCFullYear() + '-' + dos(d.getUTCMonth() + 1) + '-' + dos(d.getUTCDate());
   }
-  /** 'aaaa-mm-dd' (o fecha-hora ISO) -> 'dd/mm/aaaa'. */
   function fechaTexto(iso) {
     if (!iso) return '';
     var p = String(iso).slice(0, 10).split('-');
     return p[2] + '/' + p[1] + '/' + p[0];
   }
-  /** Fecha-hora ISO -> 'dd/mm/aaaa a las hh:mm'. */
   function fechaHoraTexto(iso) {
     if (!iso) return '';
     var s = String(iso);
     return fechaTexto(s) + (s.length >= 16 ? ' a las ' + s.slice(11, 16) : '');
   }
-
-  /** 8400 -> '8.400' ; 1234.5 con 1 decimal -> '1.234,5'. */
   function numeroTexto(n, decimales) {
     if (n === '' || n === null || n === undefined || isNaN(Number(n))) return '';
     var dec = decimales || 0;
@@ -397,11 +318,6 @@ var Util = (function () {
     return signo + entero + (dec ? ',' + partes[1] : '');
   }
   function kgTexto(n) { return numeroTexto(n, 0) + ' kg'; }
-
-  /**
-   * Texto que escribió una persona -> número, o null si no es un número.
-   * Acepta '8400', '8.400', '8400,5', ' 8 400 '. No acepta letras.
-   */
   function aNumero(v) {
     if (typeof v === 'number') return isFinite(v) ? v : null;
     if (v === null || v === undefined) return null;
@@ -412,39 +328,29 @@ var Util = (function () {
     if (!/^-?\d+(\.\d+)?$/.test(s)) return null;
     return Number(s);
   }
-
-  /** Para comparar nombres: sin acentos, minúsculas, sin espacios de más. */
   function normalizar(s) {
     return String(s === null || s === undefined ? '' : s)
       .normalize('NFD').replace(/[̀-ͯ]/g, '')
       .toLowerCase().replace(/\s+/g, ' ').trim();
   }
-  /** Código a partir de un nombre: 'José Luis Gordo' -> 'JOSE_LUIS_GORDO'. */
   function codigo(s) {
     return normalizar(s).toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_+|_+$/g, '');
   }
-  /** Patente: mayúsculas, sin espacios ni guiones. Devuelve '' si no tiene forma de patente argentina. */
   function patente(s) {
     var p = String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
     return /^([A-Z]{3}\d{3}|[A-Z]{2}\d{3}[A-Z]{2})$/.test(p) ? p : '';
   }
-
-  var ALFABETO = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ'; // sin 0/O ni 1/I
-  /**
-   * ID de registro: PREFIJO-aaaammdd-XXXXXX. `azar` es una función () -> [0,1).
-   */
+  var ALFABETO = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
   function nuevoId(prefijo, ahora, azar) {
     var s = '';
     for (var i = 0; i < 6; i++) s += ALFABETO.charAt(Math.floor(azar() * ALFABETO.length));
     return prefijo + '-' + fechaISO(ahora).replace(/-/g, '') + '-' + s;
   }
-  /** Token de link: 24 caracteres del alfabeto sin ambiguos. */
   function nuevoToken(azar) {
     var s = '';
     for (var i = 0; i < 24; i++) s += ALFABETO.charAt(Math.floor(azar() * ALFABETO.length));
     return s;
   }
-
   function indexar(lista, clave) {
     var m = {};
     (lista || []).forEach(function (x) { m[x[clave || 'id']] = x; });
@@ -459,7 +365,6 @@ var Util = (function () {
     return (registros || []).filter(function (r) { return r && typeof r === 'object' && r.estado !== 'Anulado'; });
   }
   function vacio(v) { return v === '' || v === null || v === undefined; }
-
   return {
     fechaISO: fechaISO, fechaHoraISO: fechaHoraISO, esFechaISO: esFechaISO,
     diasEntre: diasEntre, sumarDias: sumarDias, fechaTexto: fechaTexto, fechaHoraTexto: fechaHoraTexto,
@@ -471,26 +376,12 @@ var Util = (function () {
 })();
 </script>
 <script>
-/* GENERADO por herramientas/generar_js_html.js desde src/logica/validaciones.js. NO EDITAR A MANO. */
-/**
- * Validaciones de los formularios de la app de campo. Pura: la usa el servidor
- * y también el cliente (se incluye en el HTML), así que no usa nada de Node ni
- * de Google.
- *
- * - errores: bloquean el envío.
- * - dudas:   "¿Seguro?"; no bloquean si su clave está en contexto.confirmados.
- *            Las ya confirmadas vuelven en `confirmadas` (para `para_revisar`).
- * Mensajes en castellano simple, hablándole de vos a Franco.
- */
 var Validaciones = (function () {
   'use strict';
-
-  // Topes duros (DECISIONES #32, revisión M2 y M8).
-  var FACTOR_TOPE = 20;            // un número con `max` no puede pasar 20 veces ese máximo razonable
-  var TOPE_ABSOLUTO = 10000000;    // números sin `max`
-  var TEXTO_MAX = 200;             // `texto` sin `max`
-  var TEXTO_LARGO_MAX = 2000;      // `texto_largo`
-
+  var FACTOR_TOPE = 20;
+  var TOPE_ABSOLUTO = 10000000;
+  var TEXTO_MAX = 200;
+  var TEXTO_LARGO_MAX = 2000;
   function form(f) { return typeof f === 'string' ? Definicion.formulario(f) : f; }
   function filas(lista) { return (lista || []).filter(function (r) { return r && typeof r === 'object'; }); }
   function vacio(v) { return Util.vacio(v) || (typeof v === 'string' && v.trim() === ''); }
@@ -500,7 +391,6 @@ var Validaciones = (function () {
     for (k in b) r[k] = b[k];
     return r;
   }
-  /** Número legible: 8.400 ; 12,5 ; 0,25 */
   function fmt(n) {
     var d = Number.isInteger(n) ? 0 : (Math.abs(Math.round(n * 10) - n * 10) < 1e-9 ? 1 : 2);
     return Util.numeroTexto(n, d);
@@ -523,7 +413,6 @@ var Validaciones = (function () {
     if (!f) return vacio(id) ? '' : String(id);
     return catalogo === 'silos' ? (f.etiqueta || f.id) : (f.nombre || f.id);
   }
-  /** Stock del silo según las cuentas; null si no hay silo elegido. */
   function stockDe(silo, contexto) {
     if (vacio(silo)) return null;
     var m = (contexto && contexto.stock_silos) || {};
@@ -534,8 +423,6 @@ var Validaciones = (function () {
     var lista = Array.isArray(esperado) ? esperado : [esperado];
     return lista.map(String).indexOf(String(valorFila === undefined || valorFila === null ? '' : valorFila)) >= 0;
   }
-
-  // ------------------------------------------------------------------ visibles
   function aplica(c, datos, contexto) {
     datos = datos || {};
     if (c.si) {
@@ -553,13 +440,9 @@ var Validaciones = (function () {
   function visibles(campos, datos, contexto) {
     return (campos || []).filter(function (c) { return aplica(c, datos, contexto); });
   }
-  /** Campos (de la definición) que aplican con los datos actuales. */
   function camposVisibles(formulario, datos, contexto) {
     return visibles(form(formulario).campos, datos || {}, contexto || {});
   }
-
-  // ------------------------------------------------------------------ opciones
-  /** [{valor, texto, extra}] para campos `lista` y `fija`. */
   function opciones(c, datos, contexto) {
     datos = datos || {};
     contexto = contexto || {};
@@ -575,7 +458,7 @@ var Validaciones = (function () {
         for (k in c.filtro) {
           var ref = c.filtro[k];
           var val = ref === '@vigente' ? (contexto.campania_vigente && contexto.campania_vigente.id) : datos[ref];
-          if (vacio(val)) continue; // sin valor elegido todavía: no filtra por esa columna
+          if (vacio(val)) continue;
           if (String(r[k]) !== String(val).trim()) return false;
         }
       }
@@ -594,8 +477,6 @@ var Validaciones = (function () {
     if (c.permite_otro) res.push({ valor: 'OTRO', texto: 'Otro', extra: '' });
     return res;
   }
-
-  // ------------------------------------------------------------------ validar
   function nuevoEstado(contexto) {
     return { errores: [], dudas: [], confirmadas: [], conError: {}, contexto: contexto, conf: contexto.confirmados || [] };
   }
@@ -608,7 +489,6 @@ var Validaciones = (function () {
     if (st.conf.indexOf(clave) >= 0) st.confirmadas.push(d);
     else st.dudas.push(d);
   }
-
   function motivoFueraDeLista(c, v, datos, contexto) {
     if (c.catalogo === 'silos') {
       var s = filaCatalogo(contexto, 'silos', v);
@@ -624,8 +504,6 @@ var Validaciones = (function () {
     }
     return 'Esa opción no está en la lista. Elegí una de las que aparecen.';
   }
-
-  /** Valida un campo simple. Devuelve el valor normalizado ('' si está vacío o mal). */
   function validarCampo(c, valor, datos, st, clave, pre) {
     var ctx = st.contexto;
     if (c.tipo === 'foto') return vacio(valor) ? '' : valor;
@@ -649,7 +527,6 @@ var Validaciones = (function () {
         }
         if (maxF !== undefined && maxF !== null && n > maxF) { error(st, clave, pre + 'No puede ser más de ' + fmt(maxF) + uni(c) + '.'); return ''; }
         var lo = param(ctx, c.min), hi = param(ctx, c.max);
-        // Topes duros (DECISIONES #32): no se pueden confirmar.
         var tope = c.max ? (hi !== null ? hi * FACTOR_TOPE : TOPE_ABSOLUTO) : TOPE_ABSOLUTO;
         if (n > tope) { error(st, clave, pre + 'Ese número es demasiado grande. Revisalo.'); return ''; }
         if (c.min && n <= 0) { error(st, clave, pre + 'Tiene que ser más que cero. Revisalo.'); return ''; }
@@ -704,7 +581,6 @@ var Validaciones = (function () {
         return valor;
     }
   }
-
   function renglonesDeGrupo(c, datos) {
     var lista = Array.isArray(datos[c.id]) ? datos[c.id] : [];
     return lista.filter(function (r) {
@@ -717,7 +593,6 @@ var Validaciones = (function () {
     return p;
   }
   function prefijoGrupo(c, i) { return (c.papel || c.etiqueta) + ', línea ' + (i + 1) + ': '; }
-
   function validarGrupo(c, datos, st) {
     var renglones = renglonesDeGrupo(c, datos);
     if (c.min && renglones.length < c.min) error(st, c.id, 'Falta completar «' + c.etiqueta + '»: cargá por lo menos ' + c.min + '.');
@@ -731,14 +606,11 @@ var Validaciones = (function () {
       return out;
     });
   }
-
-  // Reglas de negocio por formulario (`reglas` en la definición).
   function gruposConSilo(f) {
     return f.campos.filter(function (c) {
       return c.tipo === 'grupo' && c.campos.some(function (sc) { return sc.id === 'silo'; });
     });
   }
-  /** [{silo, kg, campoKg, campoSilo, pre}] de los campos silo con kilos (simples y de grupos). */
   function salidasDeSilo(f, norm) {
     var r = [];
     if (!vacio(norm.silo)) r.push({ silo: norm.silo, kg: norm.kg, campoKg: 'kg', campoSilo: 'silo', pre: '' });
@@ -750,7 +622,6 @@ var Validaciones = (function () {
     });
     return r;
   }
-
   var REGLAS = {
     silos_distintos: function (f, norm, st) {
       gruposConSilo(f).forEach(function (g) {
@@ -836,11 +707,6 @@ var Validaciones = (function () {
       }
     }
   };
-
-  /**
-   * -> { errores:[{campo,mensaje}], dudas:[{clave,campo,mensaje}],
-   *      confirmadas:[{clave,campo,mensaje}], normalizado:{...} }
-   */
   function validar(formulario, datos, contexto) {
     var f = form(formulario);
     datos = datos || {};
@@ -854,8 +720,6 @@ var Validaciones = (function () {
     (f.reglas || []).forEach(function (r) { if (REGLAS[r]) REGLAS[r](f, norm, st); });
     return { errores: st.errores, dudas: st.dudas, confirmadas: st.confirmadas, normalizado: norm };
   }
-
-  // ------------------------------------------------------------------ resumen
   function buscarCampo(f, id) {
     for (var i = 0; i < f.campos.length; i++) if (f.campos[i].id === id) return f.campos[i];
     return null;
@@ -881,8 +745,6 @@ var Validaciones = (function () {
       default: return String(v);
     }
   }
-
-  /** Texto de `formulario.resumen` con los valores legibles. */
   function resumen(formulario, datos, contexto) {
     var f = form(formulario);
     datos = datos || {};
@@ -908,7 +770,6 @@ var Validaciones = (function () {
       return legible(c, v, contexto, mezclar(datos, norm));
     });
   }
-
   return {
     camposVisibles: camposVisibles,
     opciones: opciones,
@@ -918,63 +779,31 @@ var Validaciones = (function () {
 })();
 </script>
 <script>
-/*
- * Transporte único entre la app (cliente.html, admin.html) y el sistema.
- *
- *   Transporte.llamar(nombre, args, ms, cb, tarde)
- *     cb(err, res): err = {tipo:'red', ...} si no hubo respuesta que se pueda usar (sin señal, falla,
- *     demora de más de `ms`); si no, res = lo que devolvió api(nombre, args) en el sistema.
- *     tarde(res): la respuesta llegó DESPUÉS de haber avisado la demora (cb ya se llamó con err).
- *
- * Dos caminos, mismo contrato:
- *   - Dentro de Apps Script (o en el servidor local viejo): google.script.run.api(nombre, args).
- *   - Página estática (fuera de script.google.com): fetch POST al /exec con el cuerpo como texto
- *     JSON {nombre, args}, SIN cabecera Content-Type propia (pedido simple, sin consulta previa),
- *     sin cookies (credentials:'omit'), siguiendo la redirección de Google, sin caché y sin Referer.
- *     fetch no tiene tiempo máximo propio: a los `ms` se avisa la demora como siempre (así la
- *     persona puede reintentar; el id_envio evita duplicados) y se sigue esperando un rato más por
- *     si llega tarde; pasado ese rato, AbortController corta el pedido.
- *     Estado HTTP que no es 2xx, respuesta vacía o que no es JSON (p. ej. una página de Google
- *     en vez de datos) -> {tipo:'red'}: para la app es igual que no tener señal (se reintenta;
- *     nada se duplica).
- *
- * Transporte.crear(entorno) arma uno con dependencias propias (lo usan los tests):
- *   entorno = { google?, fetch?, AbortController?, setTimeout, clearTimeout, urlApi? }
- */
 var Transporte = (function () {
   'use strict';
-
   var ESPERA_POR_DEFECTO = 30000;
-  // Después de avisar la demora se sigue esperando esto por si la respuesta llega tarde.
-  // (Apps Script corta una ejecución a los 6 minutos; con esto alcanza para lo que la app hace.)
   var ESPERA_TARDE_MS = 90000;
-
   function crear(entorno) {
     var E = entorno || {};
     var pon = E.setTimeout, saca = E.clearTimeout;
-
     function modo() {
       try {
         if (E.google && E.google.script && E.google.script.run) return 'apps_script';
-      } catch (e) { /* sigue */ }
+      } catch (e) {   }
       if (E.urlApi && typeof E.fetch === 'function') return 'post';
       return 'ninguno';
     }
-
     function porAppsScript(nombre, args, listo) {
       E.google.script.run
         .withSuccessHandler(function (res) { listo(null, res); })
         .withFailureHandler(function (e) { listo({ tipo: 'red', error: e }); })
         .api(nombre, args);
     }
-
     function porPost(nombre, args, ms, listo) {
       var ctrl = null;
       try { ctrl = typeof E.AbortController === 'function' ? new E.AbortController() : null; } catch (e) { ctrl = null; }
-      var corte = ctrl ? pon(function () { try { ctrl.abort(); } catch (e) { /* nada */ } }, ms + ESPERA_TARDE_MS) : null;
+      var corte = ctrl ? pon(function () { try { ctrl.abort(); } catch (e) {   } }, ms + ESPERA_TARDE_MS) : null;
       var terminado = false;
-      // La respuesta sale de la cadena de promesas: si la pantalla falla al usarla, el error llega a
-      // window.onerror («Algo falló») en vez de perderse en silencio dentro de la promesa.
       function fin(err, res) {
         if (terminado) return;
         terminado = true;
@@ -1006,7 +835,6 @@ var Transporte = (function () {
         fin({ tipo: 'red', causa: cortado ? 'demora' : 'red', demora: cortado, error: e });
       });
     }
-
     function llamar(nombre, args, ms, cb, tarde) {
       ms = ms || ESPERA_POR_DEFECTO;
       var hecho = false;
@@ -1017,7 +845,7 @@ var Transporte = (function () {
       }, ms);
       function listo(err, res) {
         saca(reloj);
-        if (hecho) { if (!err && tarde) { try { tarde(res); } catch (e) { /* nada */ } } return; }
+        if (hecho) { if (!err && tarde) { try { tarde(res); } catch (e) {   } } return; }
         hecho = true;
         cb(err, res);
       }
@@ -1030,11 +858,8 @@ var Transporte = (function () {
         listo({ tipo: 'red', error: e });
       }
     }
-
     return { llamar: llamar, modo: modo };
   }
-
-  /** El de la página: se arma en la primera llamada (el google.script.run simulado del servidor local se inyecta antes). */
   var propio = null;
   function delNavegador() {
     if (propio) return propio;
@@ -1050,7 +875,6 @@ var Transporte = (function () {
     });
     return propio;
   }
-
   return {
     crear: crear,
     ESPERA_TARDE_MS: ESPERA_TARDE_MS,
@@ -1060,44 +884,179 @@ var Transporte = (function () {
 })();
 </script>
 <script>
-/*
- * App de campo (cliente). Una sola página, sin librerías, ES5/ES2015 simple para
- * celulares viejos. Habla con el servidor solo por llamar() -> Transporte (transporte.html):
- * google.script.run.api(nombre, args) dentro de Apps Script, o POST desde la página estática.
- * Usa Util y Validaciones (incluidos antes) para validar igual que el servidor.
- *
- * Reglas (brief §11): una pregunta por pantalla, botones grandes, nada de escribir lo
- * que se puede elegir, repaso antes de enviar, imposible mandar dos veces, sin señal
- * no se pierde nada (cola en localStorage), errores en castellano, nunca pantalla en blanco.
- */
+var ColaCampo = (function () {
+  'use strict';
+  var MAX_HECHOS = 500;
+  var VIDA_HECHOS_MS = 60 * 24 * 3600 * 1000;
+  var MAX_FOTO = 5000;
+  function crear(op) {
+    var ls = op.almacen || null;
+    var valido = op.valido || function (x) { return !!(x && x.id_envio); };
+    var ahora = op.ahora || function () { return Date.now(); };
+    var conocidos = {};
+    var lista = [];
+    var guardo = !!ls;
+    function tiene(o, k) { return Object.prototype.hasOwnProperty.call(o, k); }
+    function parse(t) { try { return t ? JSON.parse(t) : null; } catch (e) { return null; } }
+    function leerJSON(k) { if (!k) return null; try { return parse(ls.getItem(k)); } catch (e) { return null; } }
+    function escribirJSON(k, v) { try { ls.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } }
+    function copia(x) { return JSON.parse(JSON.stringify(x)); }
+    function hechos() {
+      var h = leerJSON(op.claveHechos);
+      return h && typeof h === 'object' && !Array.isArray(h) ? h : {};
+    }
+    function guardarHechos(h) {
+      var ids = Object.keys(h), limite = ahora() - VIDA_HECHOS_MS;
+      ids.forEach(function (id) { if (!(Number(h[id]) > limite)) delete h[id]; });
+      ids = Object.keys(h).sort(function (a, b) { return h[b] - h[a]; });
+      ids.slice(MAX_HECHOS).forEach(function (id) { delete h[id]; });
+      return escribirJSON(op.claveHechos, h);
+    }
+    function tieneFoto(x) {
+      return Object.keys((x && x.datos) || {}).some(function (c) { return typeof x.datos[c] === 'string' && x.datos[c].length > MAX_FOTO; });
+    }
+    function liviana(l) {
+      return l.map(function (x) {
+        if (!tieneFoto(x)) return x;
+        var y = copia(x);
+        Object.keys(y.datos || {}).forEach(function (c) { if (typeof y.datos[c] === 'string' && y.datos[c].length > MAX_FOTO) { y.datos[c] = ''; y.sin_foto = true; } });
+        return y;
+      });
+    }
+    function sinFotos(datos) {
+      var d = {};
+      Object.keys(datos || {}).forEach(function (c) { d[c] = typeof datos[c] === 'string' && datos[c].length > MAX_FOTO ? '' : datos[c]; });
+      return JSON.stringify(d);
+    }
+    function conFoto(x, y) {
+      if (!x.sin_foto || !y || y.sin_foto || !tieneFoto(y) || sinFotos(x.datos) !== sinFotos(y.datos)) return x;
+      var z = {}, k;
+      for (k in x) if (k !== 'sin_foto') z[k] = x[k];
+      z.datos = y.datos;
+      return z;
+    }
+    var faltaFoto = {};
+    function escribirCola(l) {
+      var completa = escribirJSON(op.clave, l);
+      if (!completa && op.claveRespaldo) {
+        escribirJSON(op.claveRespaldo, liviana(l));
+        completa = escribirJSON(op.clave, l);
+      }
+      var ok = completa || escribirJSON(op.clave, liviana(l));
+      if (op.claveRespaldo && !(completa && escribirJSON(op.claveRespaldo, l))) escribirJSON(op.claveRespaldo, liviana(l));
+      faltaFoto = {};
+      if (!completa) l.forEach(function (x) { if (tieneFoto(x)) faltaFoto[x.id_envio] = true; });
+      return ok;
+    }
+    function sincronizar(cambio) {
+      if (!ls) {
+        if (cambio) lista = cambio(lista.slice());
+        guardo = false;
+        return lista;
+      }
+      var h = hechos();
+      var nueva = [], vistos = {}, escribir = !!cambio;
+      function sumar(origen, faltaba) {
+        if (!Array.isArray(origen)) { if (origen !== null) escribir = true; return; }
+        origen.forEach(function (x) {
+          if (!valido(x) || tiene(h, x.id_envio)) { escribir = true; return; }
+          if (tiene(vistos, x.id_envio)) {
+            var i = vistos[x.id_envio], mejor = conFoto(nueva[i], x);
+            if (mejor !== nueva[i]) { nueva[i] = mejor; escribir = true; }
+            return;
+          }
+          vistos[x.id_envio] = nueva.length;
+          if (faltaba) escribir = true;
+          nueva.push(x);
+        });
+      }
+      var principal = leerJSON(op.clave);
+      sumar(principal, false);
+      var respaldo = op.claveRespaldo ? leerJSON(op.claveRespaldo) : null;
+      if (op.claveRespaldo && JSON.stringify(respaldo) !== JSON.stringify(principal)) escribir = true;
+      sumar(respaldo, true);
+      var memoria = [];
+      Object.keys(conocidos).forEach(function (id) { memoria.push(conocidos[id]); });
+      sumar(memoria, true);
+      if (cambio) nueva = cambio(nueva);
+      conocidos = {};
+      nueva.forEach(function (x) { conocidos[x.id_envio] = x; });
+      lista = nueva;
+      if (escribir) guardo = escribirCola(nueva);
+      return lista;
+    }
+    function indice(l, id) { for (var i = 0; i < l.length; i++) if (l[i].id_envio === id) return i; return -1; }
+    return {
+      leer: function () { return sincronizar(null); },
+      aprender: function (texto) {
+        var l = parse(texto);
+        if (Array.isArray(l)) l.forEach(function (x) { if (valido(x) && !tiene(conocidos, x.id_envio)) conocidos[x.id_envio] = x; });
+        return sincronizar(null);
+      },
+      poner: function (item) {
+        if (ls) {
+          var h = hechos();
+          if (tiene(h, item.id_envio)) { delete h[item.id_envio]; guardarHechos(h); }
+        }
+        return sincronizar(function (l) {
+          var i = indice(l, item.id_envio);
+          if (i >= 0) l[i] = item; else l.push(item);
+          return l;
+        });
+      },
+      quitar: function (id) {
+        if (ls) { var h = hechos(); h[id] = ahora(); guardarHechos(h); }
+        delete conocidos[id];
+        return sincronizar(function (l) { return l.filter(function (x) { return x.id_envio !== id; }); });
+      },
+      marcar: function (id, cambios) {
+        return sincronizar(function (l) {
+          var i = indice(l, id);
+          if (i >= 0) { var y = {}, k; for (k in l[i]) y[k] = l[i][k]; for (k in cambios) y[k] = cambios[k]; l[i] = y; }
+          return l;
+        });
+      },
+      guarda: function () { return guardo; },
+      sinFoto: function () {
+        var r = {};
+        lista.forEach(function (x) {
+          if (x.sin_foto) r[x.id_envio] = 'perdida';
+          else if (ls && faltaFoto[x.id_envio] && tieneFoto(x)) r[x.id_envio] = 'solo_aca';
+        });
+        return r;
+      }
+    };
+  }
+  return { crear: crear };
+})();
 (function () {
   'use strict';
-
-  // En la página estática cada entorno guarda aparte (CampoPagina.clave le agrega el entorno: ver
-  // pagina.html). En la web app de Apps Script no hay CampoPagina y las claves son las de siempre.
   function claveDisco(base) {
-    try { if (window.CampoPagina && typeof window.CampoPagina.clave === 'function') return window.CampoPagina.clave(base); } catch (e) { /* sigue */ }
+    try { if (window.CampoPagina && typeof window.CampoPagina.clave === 'function') return window.CampoPagina.clave(base); } catch (e) {   }
     return base;
   }
+  function contacto() {
+    var c = '';
+    try { c = (window.CAMPO_PAGINA && window.CAMPO_PAGINA.contacto) || document.getElementById('app').getAttribute('data-contacto') || ''; } catch (e) { c = ''; }
+    return typeof c === 'string' && c.trim() ? c.trim() : 'la oficina';
+  }
   var CLAVE_COLA = claveDisco('campo_cola_v1');
+  var CLAVE_RESPALDO = claveDisco('campo_cola_respaldo_v1');
+  var CLAVE_HECHOS = claveDisco('campo_cola_hechos_v1');
   var CLAVE_INI = claveDisco('campo_ini_v1');
   var ESPERA = { iniciar: 30000, enviar: 45000, revisarRenglon: 12000, ultimas: 30000, pedirAnulacion: 30000 };
   var MSG_FALLA = 'Algo falló al guardar. No se perdió nada: probá de nuevo en un ratito.';
   var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
   var UNIDAD_LARGA = { kg: 'kilos', mm: 'milímetros', ha: 'hectáreas', litros: 'litros', horas: 'horas', cabezas: 'animales', '%': '%', 'kg/ha': 'kilos por hectárea' };
-  // Reintento automático al enviar (sin señal u "ocupado"): esperas antes del 2.º y del 3.er intento.
   var ESPERAS_REINTENTO = [3000, 10000];
   var TEXTO_INTENTO = ['', ' (segundo intento)', ' (tercer intento)'];
   var AVISO_DEMORA_MS = 8000;
   var MOTIVOS = ['Puse mal un número', 'Elegí mal el campo, el lote o el silo', 'La cargué dos veces', 'Era de otro día'];
-
   var raiz = document.getElementById('app');
   var S = {
     token: '', ini: null, desfase: 0, carga: null, atras: null, enviando: false,
     cola: [], guardaCola: true, sinConexionInicio: false, lote: 0
   };
-
-  // ================================================================ utilidades
   function vacio(v) { return v === undefined || v === null || (typeof v === 'string' && v.trim() === ''); }
   function texto(v) { return v === undefined || v === null ? '' : String(v); }
   function copia(x) { return JSON.parse(JSON.stringify(x)); }
@@ -1111,7 +1070,7 @@ var Transporte = (function () {
         for (var i = 0; i < 16; i++) h.push((b[i] + 256).toString(16).slice(1));
         return h.slice(0, 4).join('') + '-' + h.slice(4, 6).join('') + '-' + h.slice(6, 8).join('') + '-' + h.slice(8, 10).join('') + '-' + h.slice(10).join('');
       }
-    } catch (e) { /* sigue abajo */ }
+    } catch (e) {   }
     return 'e' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
   }
   function hoy() { return Util.fechaISO(new Date(Date.now() + S.desfase)); }
@@ -1124,15 +1083,12 @@ var Transporte = (function () {
     if (iso === Util.sumarDias(h, -1)) return 'Ayer, ' + diaSemana(iso) + ' ' + ddmm(iso);
     return diaSemana(iso) + ' ' + Util.fechaTexto(iso);
   }
-
-  // ================================================================ DOM
   function agregar(n, h) {
     if (h === null || h === undefined || h === false) return;
     if (Array.isArray(h)) { for (var i = 0; i < h.length; i++) agregar(n, h[i]); return; }
     if (typeof h === 'string' || typeof h === 'number') { n.appendChild(document.createTextNode(String(h))); return; }
     n.appendChild(h);
   }
-  /** el('div', {clase, texto, onclick, ...atributos}, hijos...) — nunca usa innerHTML con datos. */
   function el(tag, props) {
     var n = document.createElement(tag);
     props = props || {};
@@ -1143,8 +1099,6 @@ var Transporte = (function () {
       if (k === 'texto') n.textContent = String(v);
       else if (k === 'clase') n.className = v;
       else if (k === 'valor') n.value = v;
-      // Por CSSOM y no como atributo: la página estática tiene una política de seguridad (CSP) que
-      // no deja poner estilos escritos en atributos.
       else if (k === 'style') n.style.cssText = String(v);
       else if (k.slice(0, 2) === 'on') n.addEventListener(k.slice(2), v);
       else n.setAttribute(k, v === true ? '' : String(v));
@@ -1152,7 +1106,6 @@ var Transporte = (function () {
     for (var i = 2; i < arguments.length; i++) agregar(n, arguments[i]);
     return n;
   }
-  /** Botón que ignora toques mientras está deshabilitado. */
   function boton(contenido, clase, fn) {
     var b = el('button', { type: 'button', clase: 'boton ' + (clase || '') });
     agregar(b, contenido);
@@ -1173,8 +1126,6 @@ var Transporte = (function () {
     return b;
   }
   function aviso(clase, contenido) { return el('div', { clase: 'aviso ' + clase, role: clase === 'error' ? 'alert' : null }, contenido); }
-
-  /** Dibuja una pantalla completa. op = {titulo, paso, cuerpo, acciones, clase, atras, foco} */
   function pintar(op) {
     S.atras = op.atras || null;
     S.enInicio = false;
@@ -1186,20 +1137,12 @@ var Transporte = (function () {
     if (op.acciones && op.acciones.length) p.appendChild(el('div', { clase: 'acciones' }, op.acciones));
     raiz.innerHTML = '';
     raiz.appendChild(p);
-    try { window.scrollTo(0, 0); } catch (e) { /* nada */ }
-    if (op.foco) setTimeout(function () { try { op.foco.focus(); } catch (e) { /* nada */ } }, 80);
+    try { window.scrollTo(0, 0); } catch (e) {   }
+    if (op.foco) setTimeout(function () { try { op.foco.focus(); } catch (e) {   } }, 80);
   }
   function pCargando(msg) {
-    pintar({ cuerpo: el('div', { clase: 'cargando' }, msg || 'Un momento…', el('div', { clase: 'ruedita' })), atras: function () { /* esperar */ } });
+    pintar({ cuerpo: el('div', { clase: 'cargando' }, msg || 'Un momento…', el('div', { clase: 'ruedita' })), atras: function () {   } });
   }
-
-  // ================================================================ servidor
-  /**
-   * llamar('enviar', [token, envio], ms, cb(err, res)). err = {tipo:'red'} si no hubo respuesta
-   * (sin señal, falla o demora). Si la respuesta llega tarde, se pasa a `tarde(res)`.
-   * El camino (google.script.run dentro de Apps Script, o POST desde la página estática) lo
-   * elige Transporte (transporte.html); para el resto de la app es lo mismo.
-   */
   function llamar(nombre, args, ms, cb, tarde) {
     try {
       Transporte.llamar(nombre, args, ms || 30000, cb, tarde);
@@ -1207,8 +1150,6 @@ var Transporte = (function () {
       setTimeout(function () { cb({ tipo: 'red', error: e }); }, 0);
     }
   }
-
-  // ================================================================ guardado en el celular
   var Disco = {
     ok: (function () {
       try { var k = claveDisco('__prueba_campo'); window.localStorage.setItem(k, '1'); window.localStorage.removeItem(k); return true; } catch (e) { return false; }
@@ -1222,41 +1163,53 @@ var Transporte = (function () {
       try { window.localStorage.setItem(clave, JSON.stringify(valor)); return true; } catch (e) { return false; }
     }
   };
-  function colaCargar() {
-    var c = Disco.leer(CLAVE_COLA);
-    S.cola = Array.isArray(c) ? c.filter(function (x) { return x && x.id_envio && (x.formulario || x.tipo === 'anulacion'); }) : S.cola;
+  var Cola = ColaCampo.crear({
+    almacen: Disco.ok ? window.localStorage : null, clave: CLAVE_COLA, claveRespaldo: CLAVE_RESPALDO, claveHechos: CLAVE_HECHOS,
+    valido: function (x) { return !!(x && typeof x === 'object' && x.id_envio && (x.formulario || x.tipo === 'anulacion')); }
+  });
+  function alDia(l) { S.cola = l; S.guardaCola = Cola.guarda(); S.sinFoto = Cola.sinFoto(); }
+  var MSG_SIN_LUGAR_FOTO = 'No hay lugar en el celular para guardar la foto. La carga quedó guardada sin la foto: la foto está solo en esta página. No la cierres hasta que se mande.';
+  var MSG_FOTO_PERDIDA = 'No hubo lugar en el celular para guardar la foto: esta carga se va a mandar sin la foto.';
+  function estadoFoto(item) { return item && S.sinFoto ? S.sinFoto[item.id_envio] || '' : ''; }
+  function avisoFoto(item) {
+    var e = estadoFoto(item);
+    if (e === 'solo_aca') return aviso('error', MSG_SIN_LUGAR_FOTO);
+    if (e === 'perdida') return aviso('amarillo', MSG_FOTO_PERDIDA);
+    return null;
   }
-  function colaGuardar() {
-    if (!Disco.ok) { S.guardaCola = false; return false; }
-    if (Disco.guardar(CLAVE_COLA, S.cola)) { S.guardaCola = true; return true; }
-    // Sin lugar (fotos grandes): se guardan sin la foto y se avisa.
-    var liviana = S.cola.map(function (x) {
-      var y = copia(x);
-      Object.keys(y.datos || {}).forEach(function (k) { if (typeof y.datos[k] === 'string' && y.datos[k].length > 5000) { y.datos[k] = ''; y.sin_foto = true; } });
-      return y;
-    });
-    S.guardaCola = Disco.guardar(CLAVE_COLA, liviana);
-    return S.guardaCola;
-  }
-  function colaPoner(item) {
-    var i = indiceCola(item.id_envio);
-    if (i >= 0) S.cola[i] = item; else S.cola.push(item);
-    colaGuardar();
-  }
-  function colaQuitar(idEnvio) {
-    var i = indiceCola(idEnvio);
-    if (i >= 0) { S.cola.splice(i, 1); colaGuardar(); }
-  }
+  function colaCargar() { alDia(Cola.leer()); }
+  function colaPoner(item) { alDia(Cola.poner(item)); }
+  function colaQuitar(idEnvio) { alDia(Cola.quitar(idEnvio)); }
+  function colaMarcar(idEnvio, cambios) { alDia(Cola.marcar(idEnvio, cambios)); }
   function indiceCola(idEnvio) {
     for (var i = 0; i < S.cola.length; i++) if (S.cola[i].id_envio === idEnvio) return i;
     return -1;
   }
   function misPendientes() {
+    colaCargar();
     var yo = S.ini && S.ini.persona ? S.ini.persona.id : '';
     return S.cola.filter(function (x) { return x.persona === yo; });
   }
-
-  // ================================================================ definición y contexto
+  function pendientesAjenos() {
+    colaCargar();
+    var yo = S.ini && S.ini.persona ? S.ini.persona.id : '';
+    return S.cola.filter(function (x) { return x.persona && x.persona !== yo; });
+  }
+  function textoAjenos(aj) {
+    var nombres = {};
+    aj.forEach(function (x) { nombres[typeof x.nombre === 'string' && x.nombre.trim() ? x.nombre.trim().slice(0, 40) : '?'] = true; });
+    var l = Object.keys(nombres);
+    var de = l.length === 1 && l[0] !== '?' ? l[0] : (l.length === 1 ? 'otra persona' : 'otras personas');
+    var sujeto = de === 'otra persona' ? 'esa persona' : de === 'otras personas' ? 'cada una' : de;
+    return { cuantas: 'En este celular hay ' + partesPendientes(aj) + ' sin enviar de ' + de + '.', sujeto: sujeto, una: aj.length === 1 };
+  }
+  window.addEventListener('storage', function (e) {
+    try {
+      if (e && e.key !== null && e.key !== CLAVE_COLA && e.key !== CLAVE_RESPALDO && e.key !== CLAVE_HECHOS) return;
+      if (e && (e.key === CLAVE_COLA || e.key === CLAVE_RESPALDO)) alDia(Cola.aprender(e.newValue)); else colaCargar();
+      if (S.enInicio && !S.enviando && S.ini) pInicio();
+    } catch (x) {   }
+  });
   function formulario(id) {
     var l = (S.ini && S.ini.formularios) || [];
     for (var i = 0; i < l.length; i++) if (l[i].id === id) return l[i];
@@ -1297,15 +1250,12 @@ var Transporte = (function () {
       default: return texto(v);
     }
   }
-
-  // ================================================================ la carga en curso
   function nuevaCarga(f) {
     var c = { f: f, id_envio: uuid(), planilla: '', renglon: '', sin_planilla: false, datos: {}, conf: {}, paso: null, alRepaso: false, error: '' };
     f.campos.forEach(function (campo) { if (campo.tipo === 'fecha' && !campo.sin_defecto) c.datos[campo.id] = hoy(); });
     return c;
   }
   function confLista(c) { return Object.keys(c.conf).filter(function (k) { return c.conf[k]; }); }
-  /** Datos para validar/enviar: sin renglones de grupo vacíos. */
   function datosLimpios(c) {
     var d = {};
     Object.keys(c.datos).forEach(function (k) {
@@ -1320,7 +1270,7 @@ var Transporte = (function () {
     return {
       id_envio: c.id_envio, formulario: c.f.id, titulo: c.f.titulo, planilla: c.sin_planilla ? '' : c.planilla,
       renglon: c.sin_planilla ? '' : c.renglon, sin_planilla: c.sin_planilla, datos: datosLimpios(c),
-      confirmados: confLista(c), persona: S.ini.persona.id, token: S.token, creado: Util.fechaHoraISO(new Date(Date.now() + S.desfase)),
+      confirmados: confLista(c), persona: S.ini.persona.id, nombre: S.ini.persona.nombre, token: S.token, creado: Util.fechaHoraISO(new Date(Date.now() + S.desfase)),
       resumen: resumenLocal(c.f, datosLimpios(c))
     };
   }
@@ -1337,8 +1287,6 @@ var Transporte = (function () {
   function resumenLocal(f, datos) {
     try { return Validaciones.resumen(f, datos, contexto([])).replace(/,\s*$/, ''); } catch (e) { return f.titulo; }
   }
-
-  /** Lista lineal de pasos: un campo por pantalla; el grupo, por renglón y subcampo. */
   function pasos(c) {
     var lista = [];
     Validaciones.camposVisibles(c.f, datosLimpios(c), contexto(confLista(c))).forEach(function (campo) {
@@ -1377,7 +1325,6 @@ var Transporte = (function () {
     });
     if (!p.grupo) limpiarDependientes(c, p.campo.id);
   }
-  /** Si cambia el campo, el lote o el silo elegido ya no sirve: se borra lo que depende. */
   function limpiarDependientes(c, id) {
     c.f.campos.forEach(function (campo) {
       if (campo.tipo === 'grupo') {
@@ -1401,7 +1348,6 @@ var Transporte = (function () {
       dudas: v.dudas.filter(function (d) { return d.campo === k; })
     };
   }
-  /** Clave de validación ('kg', 'origenes.1.kg_campo', 'origenes') -> clave de paso. */
   function pasoDeClave(c, k) {
     var lista = pasos(c);
     var m = /^([a-z_]+)\.(\d+)\.([a-z_]+)$/.exec(k || '');
@@ -1424,15 +1370,13 @@ var Transporte = (function () {
     }
     return null;
   }
-
-  // ================================================================ historia (botón Atrás del navegador)
   var historia = {
     gs: !!(window.google && google.script && google.script.history),
     empujar: function () {
       try {
         if (this.gs) google.script.history.push({ campo: Date.now() });
         else window.history.pushState({ campo: Date.now() }, '');
-      } catch (e) { /* nada */ }
+      } catch (e) {   }
     },
     iniciar: function () {
       var yo = this;
@@ -1443,20 +1387,17 @@ var Transporte = (function () {
       try {
         if (this.gs) google.script.history.setChangeHandler(alVolver);
         else window.addEventListener('popstate', alVolver);
-      } catch (e) { /* nada */ }
+      } catch (e) {   }
       this.empujar();
     }
   };
   window.addEventListener('beforeunload', function (e) {
-    // Avisa solo si se perdería algo: una carga a medio hacer (todavía no enviada) o una
-    // carga sin enviar que este celular no puede guardar.
     var c = S.carga;
     var aMedias = (c && !c.enviada && Object.keys(c.datos).some(function (k) { return k !== 'fecha' && !vacio(c.datos[k]) && !(Array.isArray(c.datos[k]) && !datosLimpios(c)[k].length); })) ||
-      (!S.guardaCola && misPendientes().length > 0);
+      (!S.guardaCola && misPendientes().length > 0) ||
+      misPendientes().some(function (x) { return estadoFoto(x) === 'solo_aca'; });
     if (aMedias) { e.preventDefault(); e.returnValue = ''; return ''; }
   });
-
-  // ================================================================ arranque
   function leerParametros(cb) {
     var listo = false;
     function fin(p) { if (listo) return; listo = true; cb(p || {}); }
@@ -1469,10 +1410,9 @@ var Transporte = (function () {
           var k = decodeURIComponent(i >= 0 ? par.slice(0, i) : par);
           p[k] = decodeURIComponent((i >= 0 ? par.slice(i + 1) : '').replace(/\+/g, ' '));
         });
-      } catch (e) { /* nada */ }
+      } catch (e) {   }
       return p;
     }
-    // Página estática: el token viene del fragmento (#t=…) o de lo guardado en el celular (pagina.html).
     if (window.CampoPagina) { fin(window.CampoPagina.parametros()); return; }
     try {
       if (window.google && google.script && google.script.url) {
@@ -1480,10 +1420,9 @@ var Transporte = (function () {
         setTimeout(function () { fin(deLaUrl()); }, 4000);
         return;
       }
-    } catch (e) { /* sigue */ }
+    } catch (e) {   }
     fin(deLaUrl());
   }
-
   function arrancar() {
     pCargando('Abriendo…');
     historia.iniciar();
@@ -1503,18 +1442,13 @@ var Transporte = (function () {
     var g = Disco.leer(CLAVE_INI);
     return g && g.token === S.token && g.ini && g.ini.ok ? g.ini : null;
   }
-  /**
-   * Apertura: si el celular tiene la respuesta de la última vez, los botones aparecen al
-   * instante y se refresca por detrás (si el link fue revocado, el refresco lo saca).
-   * Si no, "Abriendo…" y, pasados 8 s, avisa que tarda por la señal.
-   */
   function pedirInicio() {
     var guardado = iniGuardado();
     if (guardado) {
       usarInicio(guardado, false, true);
       llamar('iniciar', [S.token], ESPERA.iniciar, function (err, res) {
         if (err) { S.sinConexionInicio = true; if (S.enInicio) pInicio(); return; }
-        if (res && res.motivo === 'link_invalido') { Disco.guardar(CLAVE_INI, null); colaGuardar(); pLinkInvalido(); return; }
+        if (res && res.motivo === 'link_invalido') { Disco.guardar(CLAVE_INI, null); pLinkInvalido(); return; }
         if (!res || !res.ok) return;
         Disco.guardar(CLAVE_INI, { token: S.token, ini: res });
         S.ini = res;
@@ -1554,7 +1488,6 @@ var Transporte = (function () {
       vaciarColaSola();
     });
   }
-  /** Después de guardar, trae de nuevo stock, silos y medidores sin molestar a la persona. */
   function refrescarInicio() {
     llamar('iniciar', [S.token, { refresco: true }], ESPERA.iniciar, function (err, res) {
       if (err || !res || !res.ok) return;
@@ -1566,34 +1499,55 @@ var Transporte = (function () {
   }
   function usarInicio(ini, sinConexion, guardado) {
     S.ini = ini;
-    try { document.title = 'Campo'; } catch (e) { /* nada */ }
+    try { document.title = 'Campo'; } catch (e) {   }
     S.desfase = ini.ahora_ms && !sinConexion && !guardado ? ini.ahora_ms - Date.now() : S.desfase;
     S.sinConexionInicio = !!sinConexion;
     pInicio();
   }
-
-  // ================================================================ pantallas: inicio
-  /** "Tenés 2 cargas sin enviar", "Tenés 1 carga y 1 pedido de anulación sin enviar". */
-  function textoPendientes(pend) {
+  function partesPendientes(pend) {
     var p = pend.filter(function (x) { return x.tipo === 'anulacion'; }).length, c = pend.length - p;
     var partes = [];
     if (c) partes.push(c === 1 ? '1 carga' : c + ' cargas');
     if (p) partes.push(p === 1 ? '1 pedido de anulación' : p + ' pedidos de anulación');
-    return 'Tenés ' + partes.join(' y ') + ' sin enviar';
+    return partes.join(' y ');
+  }
+  function textoPendientes(pend) { return 'Tenés ' + partesPendientes(pend) + ' sin enviar'; }
+  function pAvisoAjenos(aj) {
+    var t = textoAjenos(aj);
+    pintar({
+      titulo: 'Campo', clase: 'fondo-amarillo',
+      cuerpo: [
+        el('h1', { texto: 'Hola, ' + S.ini.persona.nombre }),
+        el('div', { clase: 'marca-grande', 'aria-hidden': 'true', texto: '📱' }),
+        el('p', { clase: 'grande', style: 'font-size:25px', texto: t.cuantas }),
+        el('p', { clase: 'grande', style: 'font-size:22px', texto: (t.una ? 'No se borra y no se manda con tu link. Para mandarla, ' : 'No se borran y no se mandan con tu link. Para mandarlas, ') + t.sujeto + ' tiene que abrir su link en este celular.' }),
+        boton('Entendido, seguir', 'siguiente', function () { S.ajenosVistos = true; pInicio(); })
+      ],
+      atras: function () { S.ajenosVistos = true; pInicio(); }
+    });
   }
   function pInicio() {
     S.carga = null;
     S.enviando = false;
     var ini = S.ini;
+    var aj = pendientesAjenos();
+    if (aj.length && !S.ajenosVistos) { pAvisoAjenos(aj); return; }
     var pend = misPendientes();
     var cuerpo = [el('h1', { texto: 'Hola, ' + ini.persona.nombre })];
     if (S.sinConexionInicio) cuerpo.push(aviso('amarillo', 'Sin señal: estás usando los datos de la última vez. Lo que cargues queda en el celular hasta que haya señal.'));
     if (pend.length) {
+      var fotos = pend.map(estadoFoto);
       cuerpo.push(aviso('amarillo', [
         el('div', { clase: 'grande', texto: textoPendientes(pend) }),
         !S.guardaCola ? el('div', { texto: 'Este celular no la puede guardar: no cierres esta página hasta enviarla.' }) : null,
+        fotos.indexOf('solo_aca') >= 0 ? el('div', { texto: 'No hay lugar en el celular para guardar la foto: no cierres esta página hasta enviarla.' })
+          : fotos.indexOf('perdida') >= 0 ? el('div', { texto: 'No hubo lugar en el celular para guardar una foto: esa carga se va a mandar sin la foto.' }) : null,
         boton('Enviar ahora', 'siguiente', function () { S.lote = 0; enviarPendientes(); })
       ]));
+    }
+    if (aj.length) {
+      var t = textoAjenos(aj);
+      cuerpo.push(aviso('info', t.cuantas + (t.una ? ' Se manda' : ' Se mandan') + ' cuando ' + t.sujeto + ' abra su link en este celular.'));
     }
     var grilla = el('div', { clase: 'inicio-grilla' + (ini.botones.length <= 3 ? ' uno' : '') });
     ini.botones.forEach(function (b) {
@@ -1605,9 +1559,8 @@ var Transporte = (function () {
     cuerpo.push(boton([el('span', { 'aria-hidden': 'true', texto: '↩️' }), ' Me equivoqué'], 'peligro', function () { pMeEquivoque(); }));
     if (Array.isArray(ini.rindes)) cuerpo.push(boton([el('span', { 'aria-hidden': 'true', texto: '📊' }), ' Mis lotes'], 'secundario', function () { pMisLotes(); }));
     pintar({ titulo: diaSemana(hoy()).charAt(0).toUpperCase() + diaSemana(hoy()).slice(1) + ' ' + Util.fechaTexto(hoy()), cuerpo: cuerpo, atras: null });
-    S.enInicio = true; // después de pintar (pintar lo pone en false)
+    S.enInicio = true;
   }
-
   function abrirBoton(b) {
     var forms = b.formularios.map(formulario).filter(Boolean);
     if (forms.length === 1) { empezar(forms[0], b); return; }
@@ -1630,8 +1583,6 @@ var Transporte = (function () {
     if (c && c.boton && c.boton.formularios.length > 1) { abrirBoton(c.boton); return; }
     pInicio();
   }
-
-  // ================================================================ planilla y renglón
   function revisarPlanillaLocal(f, planilla, renglon) {
     var s = texto(planilla).trim();
     if (!s) return 'Falta el número de planilla. Está impreso arriba de la hoja.';
@@ -1663,9 +1614,7 @@ var Transporte = (function () {
         if (!err && res && res.tipo === 'duplicado') { pDuplicado(null, res); return; }
         if (!err && res && res.tipo === 'errores' && res.errores && res.errores[0] && res.errores[0].campo === 'planilla') { pPlanilla(res.errores[0].mensaje); return; }
         if (!err && res && res.tipo === 'link_invalido') { pLinkInvalido(); return; }
-        // Renglón anulado por Majo: esta carga es su corrección (DECISIONES #31).
         c.corrige = !err && res && res.ok && res.corrige ? String(res.corrige) : '';
-        // Sin señal o sin respuesta: se sigue igual; el servidor lo vuelve a revisar al enviar.
         irAlPrimerPaso();
       });
     });
@@ -1700,8 +1649,6 @@ var Transporte = (function () {
     if (!c.paso) { pRepaso(); return; }
     pPaso();
   }
-
-  // ================================================================ preguntas
   function avanzar() {
     var c = S.carga;
     if (c.alRepaso) {
@@ -1718,7 +1665,6 @@ var Transporte = (function () {
     var l = pasos(c);
     var i = indice(l, c.paso);
     var p = l[i];
-    // Primer subcampo de un renglón de grupo vacío: se saca ese renglón y se vuelve a "¿otro más?"
     if (p && p.grupo && !p.otro && p.i > 0 && p.campo.id === p.grupo.campos[0].id) {
       var it = c.datos[p.grupo.id][p.i] || {};
       var vacioIt = Object.keys(it).every(function (k) { return vacio(it[k]); });
@@ -1734,8 +1680,6 @@ var Transporte = (function () {
     pPaso();
   }
   function pasoTexto(l, i) { return 'Paso ' + (i + 1) + ' de ' + l.length; }
-
-  /** Valida el paso actual; si hay error lo muestra, si hay duda pregunta "¿Seguro?", si no avanza. */
   function confirmarPaso(p) {
     var c = S.carga;
     var r = validarPaso(c, p);
@@ -1747,7 +1691,6 @@ var Transporte = (function () {
     }
     avanzar();
   }
-
   function pPaso() {
     var c = S.carga;
     var l = pasos(c);
@@ -1764,7 +1707,6 @@ var Transporte = (function () {
     if (t === 'foto') return pasoFoto(c, p, l, i, error);
     return pasoEntrada(c, p, l, i, error);
   }
-
   function encabezadoPaso(c, p) {
     var extra = [];
     if (p.grupo) {
@@ -1785,7 +1727,6 @@ var Transporte = (function () {
     if (p.grupo && p.campo.id === 'silo') return p.i === 0 ? '¿De qué silo cargó?' : '¿De qué otro silo cargó?';
     return p.campo.etiqueta;
   }
-
   function pasoLista(c, p, l, i, error) {
     var ctx = contexto(confLista(c));
     var datosOp = p.grupo ? Object.assign({}, datosLimpios(c), c.datos[p.grupo.id][p.i] || {}) : datosLimpios(c);
@@ -1826,7 +1767,6 @@ var Transporte = (function () {
     c.paso = 'g:' + p.grupo.id + ':' + (c.datos[p.grupo.id].length - 1) + ':_otro';
     pPaso();
   }
-
   function pasoFecha(c, p, l, i, error) {
     var h = hoy(), ayer = Util.sumarDias(h, -1);
     var v = valorPaso(c, p);
@@ -1870,7 +1810,6 @@ var Transporte = (function () {
     var volver = function () { pPaso(); };
     pintar({ titulo: c.f.titulo, cuerpo: cuerpo, acciones: [botonAtras(volver)], atras: volver });
   }
-
   function pasoEntrada(c, p, l, i, error) {
     var campo = p.campo, t = campo.tipo;
     var v = valorPaso(c, p);
@@ -1905,7 +1844,7 @@ var Transporte = (function () {
       input.addEventListener('input', function () { input.value = input.value.toUpperCase().replace(/[^A-Z0-9]/g, ''); });
     } else if (t === 'texto_largo') {
       props.rows = 4;
-      props.maxlength = campo.max || 2000; // DECISIONES #32: tope de los textos largos
+      props.maxlength = campo.max || 2000;
       input = el('textarea', props);
       input.value = vacio(v) ? '' : String(v);
     } else {
@@ -1936,7 +1875,6 @@ var Transporte = (function () {
       foco: input
     });
   }
-
   function pasoOtro(c, p, l, i) {
     var items = (c.datos[p.grupo.id] || []).filter(function (x) { return x && !vacio(x.silo); });
     var total = 0;
@@ -1960,7 +1898,6 @@ var Transporte = (function () {
     ];
     pintar({ titulo: c.f.titulo, paso: pasoTexto(l, i), cuerpo: cuerpo, acciones: [botonAtras(retroceder)], atras: retroceder });
   }
-
   function achicarFoto(archivo, cb) {
     try {
       var lector = new FileReader();
@@ -2004,8 +1941,6 @@ var Transporte = (function () {
     if (!vacio(v)) cuerpo.push(boton('Sacar la foto (no mandar foto)', 'secundario', function () { ponerValor(c, p, ''); pPaso(); }));
     pintar({ titulo: c.f.titulo, paso: pasoTexto(l, i), cuerpo: cuerpo, acciones: [botonAtras(retroceder), botonSiguiente(function () { confirmarPaso(p); }, vacio(v) ? 'Seguir sin foto →' : 'Siguiente →')], atras: retroceder });
   }
-
-  // ================================================================ ¿Seguro?
   function pSeguro(duda, valorTexto, alSi, alNo) {
     var msg = texto(duda.mensaje).replace(/^(.*?: )?¿Seguro\?\s*/, '$1').replace(/\s*¿Seguro\?\s*$/, '');
     pintar({
@@ -2021,8 +1956,6 @@ var Transporte = (function () {
       atras: alNo
     });
   }
-
-  // ================================================================ repaso
   function irAClave(k, mensaje) {
     var c = S.carga;
     if (k === 'planilla') { pPlanilla(mensaje); return; }
@@ -2070,8 +2003,6 @@ var Transporte = (function () {
       fila(p.campo.papel || (p.campo.tipo === 'foto' ? 'Foto' : p.campo.etiqueta), legible(p.campo, valorPaso(c, p), c.datos), p.clave);
     });
     var corregir = function () { var l = pasos(c); c.paso = l.length ? l[l.length - 1].clave : null; c.alRepaso = false; if (c.paso) pPaso(); else pPlanilla(); };
-    // Los botones van DESPUÉS de todas las filas (no fijos abajo): para tocar "Está bien" hay que
-    // haber pasado por todo lo cargado (Revisión 1, B5).
     pintar({
       titulo: c.f.titulo, paso: 'Repaso',
       cuerpo: [
@@ -2086,8 +2017,6 @@ var Transporte = (function () {
       atras: corregir
     });
   }
-
-  // ================================================================ envío
   function envioDe(item) {
     return {
       formulario: item.formulario, id_envio: item.id_envio, planilla: item.planilla, renglon: item.renglon,
@@ -2104,7 +2033,6 @@ var Transporte = (function () {
     colaPoner(item);
     mandar(item);
   }
-  /** ¿Vale la pena reintentar solo? Sin respuesta (señal) u "ocupado". Mismo id_envio: no duplica. */
   function reintentable(err, res) { return !!err || !res || typeof res !== 'object' || (!res.ok && res.tipo === 'ocupado'); }
   function mandar(item, alTerminarLote, intento) {
     intento = intento || 0;
@@ -2119,11 +2047,10 @@ var Transporte = (function () {
       if (err) { pSinSenal(item); return; }
       manejarRespuesta(item, res, alTerminarLote);
     }, function tarde(res) {
-      // Llegó la respuesta después de avisar "sin señal": si se guardó, sale de la cola.
       if (res && res.ok) {
         colaQuitar(item.id_envio);
         if (S.mostrandoSinSenal === item.id_envio) pConfirmado(res, item);
-        else if (S.enInicio && !S.enviando) pInicio(); // el cartel de pendientes se actualiza
+        else if (S.enInicio && !S.enviando) pInicio();
       }
     });
   }
@@ -2136,8 +2063,7 @@ var Transporte = (function () {
       pConfirmado(res, item);
       return;
     }
-    var it = S.cola[indiceCola(item.id_envio)];
-    if (it) { it.rechazo = res.tipo || 'error'; colaGuardar(); }
+    colaMarcar(item.id_envio, { rechazo: res.tipo || 'error' });
     if (res.tipo === 'link_invalido') { pLinkInvalido(); return; }
     if (res.tipo === 'duplicado') { pDuplicado(item, res); return; }
     if (res.tipo === 'errores') { pErroresServidor(item, res); return; }
@@ -2170,9 +2096,11 @@ var Transporte = (function () {
       cuerpo: [
         el('div', { clase: 'marca-grande', 'aria-hidden': 'true', texto: '📵' }),
         el('h1', { texto: 'No hay señal' }),
-        S.guardaCola
-          ? el('p', { clase: 'grande', style: 'font-size:24px', texto: 'Quedó guardado en el celular. Tocá Reintentar cuando tengas señal.' })
-          : el('p', { clase: 'grande', style: 'font-size:24px', texto: 'No cierres esta página: la carga está acá y se manda cuando toques Reintentar.' }),
+        !S.guardaCola
+          ? el('p', { clase: 'grande', style: 'font-size:24px', texto: 'No cierres esta página: la carga está acá y se manda cuando toques Reintentar.' })
+          : estadoFoto(item) === 'solo_aca' ? aviso('error', MSG_SIN_LUGAR_FOTO + ' Tocá Reintentar cuando tengas señal.')
+          : el('p', { clase: 'grande', style: 'font-size:24px', texto: 'Quedó guardado en el celular. Tocá Reintentar cuando tengas señal.' }),
+        estadoFoto(item) === 'perdida' ? avisoFoto(item) : null,
         resumenItem(item),
         reintentar,
         boton('Volver al inicio', '', function () { S.mostrandoSinSenal = null; pInicio(); })
@@ -2186,7 +2114,7 @@ var Transporte = (function () {
       cuerpo: [
         el('h1', { texto: 'No se pudo enviar' }),
         el('p', { clase: 'grande', style: 'font-size:24px', texto: mensaje }),
-        el('p', { texto: 'La carga quedó guardada en el celular.' }),
+        avisoFoto(item) || el('p', { texto: 'La carga quedó guardada en el celular.' }),
         resumenItem(item),
         boton('Reintentar', 'siguiente', function (b) { b.disabled = true; mandarItem(item); }),
         boton('Volver al inicio', '', pInicio)
@@ -2203,6 +2131,7 @@ var Transporte = (function () {
         el('h1', { texto: 'Hay que corregir algo' }),
         el('div', null, errores.map(function (e) { return aviso('error', e.mensaje); })),
         el('p', { texto: 'No se guardó todavía, pero no se perdió: está en el celular.' }),
+        avisoFoto(item),
         resumenItem(item),
         c ? boton('Corregir', 'siguiente', function () { S.carga = c; irAClave(errores[0] ? errores[0].campo : ''); }) : null,
         boton('Descartar esta carga', 'peligro secundario', function () { pDescartar(item); }),
@@ -2223,6 +2152,7 @@ var Transporte = (function () {
         el('div', { style: 'margin-top:6px;font-weight:700', texto: 'Lo cargó ' + texto(a.cargado_por) + ' el ' + Util.fechaHoraTexto(a.cargado_el) + '.' + (a.estado === 'Anulado' ? ' (Después se anuló.)' : '') })),
       el('p', { texto: 'Fijate el número de planilla y de renglón. Si lo que se cargó está mal, pedí que lo anulen desde «Me equivoqué».' })
     ];
+    if (item) cuerpo.push(avisoFoto(item));
     var c = item ? cargaDeItem(item) : S.carga;
     cuerpo.push(boton('Cambiar planilla o renglón', 'siguiente', function () { S.carga = c; pPlanilla(); }));
     if (item) cuerpo.push(boton('Descartar esta carga', 'peligro secundario', function () { pDescartar(item); }));
@@ -2275,15 +2205,11 @@ var Transporte = (function () {
     if (!mismaPlanilla && item.sin_planilla) { c.sin_planilla = true; irAlPrimerPaso(); return; }
     pPlanilla();
   }
-
-  /**
-   * Al abrir la app o al volver la señal (evento "online"): manda sola la cola, sin cambiar de
-   * pantalla. Lo que el servidor rechaza (duplicado, errores, "¿seguro?") queda para «Enviar ahora».
-   */
   var vaciando = false;
+  function esPasajero(tipo) { return ['duplicado', 'errores', 'confirmar', 'link_invalido', 'muy_grande'].indexOf(tipo) < 0; }
   function vaciarColaSola() {
     if (vaciando || S.enviando || !S.ini) return;
-    var lista = misPendientes().filter(function (x) { return !x.rechazo || x.rechazo === 'ocupado' || x.rechazo === 'error'; });
+    var lista = misPendientes().filter(function (x) { return !x.rechazo || esPasajero(x.rechazo); });
     if (!lista.length) return;
     vaciando = true;
     var item = lista[0];
@@ -2291,28 +2217,24 @@ var Transporte = (function () {
     var args = item.tipo === 'anulacion' ? { hoja: item.hoja, id: item.id, motivo: item.motivo, id_envio: item.id_envio } : envioDe(item);
     llamar(nombre, [tokenDe(item), args], ESPERA.enviar, function (err, res) {
       vaciando = false;
-      if (err || !res || typeof res !== 'object') return; // sigue sin señal: queda en la cola
+      if (err || !res || typeof res !== 'object') return;
       if (res.motivo === 'link_invalido') return;
-      if (res.ok || (item.tipo === 'anulacion' && res.tipo !== 'ocupado' && res.tipo !== 'error')) {
+      if (res.ok || (item.tipo === 'anulacion' && res.tipo === 'errores')) {
         colaQuitar(item.id_envio);
         if (res.ok && item.tipo !== 'anulacion') refrescarInicio();
       } else {
-        var it = S.cola[indiceCola(item.id_envio)];
-        if (it) { it.rechazo = res.tipo || 'error'; colaGuardar(); }
-        if (res.tipo === 'ocupado' || res.tipo === 'error') return;
+        colaMarcar(item.id_envio, { rechazo: res.tipo || 'error' });
+        if (esPasajero(res.tipo)) return;
       }
       if (S.enInicio && !S.enviando) pInicio();
       vaciarColaSola();
     });
   }
   window.addEventListener('online', function () { setTimeout(vaciarColaSola, 1000); });
-  // Respaldo: el evento "online" no siempre llega (celulares viejos, señal que va y viene).
-  // Mientras haya algo en la cola, cada 20 s se prueba de nuevo, sin molestar.
   setInterval(function () {
-    try { if (misPendientes().length && navigator.onLine !== false) vaciarColaSola(); } catch (e) { /* nada */ }
+    try { if (misPendientes().length && navigator.onLine !== false) vaciarColaSola(); } catch (e) {   }
   }, 20000);
   document.addEventListener('visibilitychange', function () { if (!document.hidden) setTimeout(vaciarColaSola, 500); });
-
   function enviarPendientes() {
     var lista = misPendientes();
     if (!lista.length) {
@@ -2328,8 +2250,6 @@ var Transporte = (function () {
     }
     mandarItem(lista[0], function () { S.lote++; enviarPendientes(); });
   }
-
-  // ================================================================ me equivoqué
   function pMeEquivoque() {
     pCargando('Buscando tus cargas…');
     llamar('ultimas', [S.token], ESPERA.ultimas, function (err, res) {
@@ -2418,14 +2338,14 @@ var Transporte = (function () {
     });
   }
   function pedidoEnCola(c) {
+    colaCargar();
     return S.cola.some(function (x) { return x.tipo === 'anulacion' && x.id === c.id && x.hoja === c.hoja; });
   }
-  /** El pedido de anulación va a la misma cola del celular que las cargas: sin señal no se pierde. */
   function mandarAnulacion(c, motivo) {
     var item = {
       tipo: 'anulacion', id_envio: c._id_envio, hoja: c.hoja, id: c.id, motivo: motivo,
       titulo: 'Pedido de anulación', resumen: 'Anular: ' + c.resumen + ' — ' + motivo,
-      persona: S.ini.persona.id, token: S.token, creado: Util.fechaHoraISO(new Date(Date.now() + S.desfase))
+      persona: S.ini.persona.id, nombre: S.ini.persona.nombre, token: S.token, creado: Util.fechaHoraISO(new Date(Date.now() + S.desfase))
     };
     colaPoner(item);
     mandarItem(item);
@@ -2455,8 +2375,7 @@ var Transporte = (function () {
       S.enviando = false;
       if (err || !res || typeof res !== 'object') { pSinSenal(item); return; }
       if (res.motivo === 'link_invalido') { pLinkInvalido(); return; }
-      if (!res.ok && (res.tipo === 'ocupado' || res.tipo === 'error')) { pProblema(item, res.mensaje || MSG_FALLA); return; }
-      // Guardado, o rechazado para siempre (ya anulada, no es tuya): sale de la cola.
+      if (!res.ok && res.tipo !== 'errores') { pProblema(item, res.mensaje || MSG_FALLA); return; }
       colaQuitar(item.id_envio);
       if (!res.ok) {
         pintar({ titulo: 'Me equivoqué', cuerpo: [el('h1', { texto: 'No se pudo pedir la anulación' }), aviso('error', res.mensaje || MSG_FALLA), resumenItem(item), boton('Volver al inicio', '', pInicio)], atras: pInicio });
@@ -2472,8 +2391,6 @@ var Transporte = (function () {
       }
     });
   }
-
-  // ================================================================ mis lotes (León)
   function pMisLotes() {
     var filas = S.ini.rindes || [];
     var cuerpo = [el('h1', { texto: 'Mis lotes' }), el('p', { clase: 'chico', texto: 'Kilos cosechados según las tolvas cargadas. Solo para mirar.' })];
@@ -2487,21 +2404,17 @@ var Transporte = (function () {
     });
     pintar({ titulo: 'Mis lotes', cuerpo: cuerpo, acciones: [botonAtras(pInicio)], atras: pInicio });
   }
-
-  // ================================================================ link inválido y fallas
   function pLinkInvalido() {
-    // En la página estática el token quedó guardado en el celular: si el sistema dice que no sirve, se olvida.
-    try { if (window.CampoPagina) window.CampoPagina.olvidar(); } catch (e) { /* nada */ }
+    try { if (window.CampoPagina) window.CampoPagina.olvidar(); } catch (e) {   }
     pintar({
-      cuerpo: [el('div', { clase: 'marca-grande', 'aria-hidden': 'true', texto: '🔒' }), el('h1', { clase: 'centro', style: 'font-size:32px', texto: 'Este link no funciona. Avisale a Julián.' })],
-      atras: function () { /* nada */ }
+      cuerpo: [el('div', { clase: 'marca-grande', 'aria-hidden': 'true', texto: '🔒' }), el('h1', { clase: 'centro', style: 'font-size:32px', texto: 'Este link no funciona. Avisale a ' + contacto() + '.' })],
+      atras: function () {   }
     });
   }
-  /** Página estática abierta sin link: una pantalla llana, sin nombres ni pistas del sistema. */
   function pSinLink() {
     pintar({
       cuerpo: [el('h1', { clase: 'centro', style: 'font-size:32px;margin-top:40px', texto: 'Pedile tu link a la oficina.' })],
-      atras: function () { /* nada */ }
+      atras: function () {   }
     });
   }
   var fallando = false;
@@ -2519,34 +2432,25 @@ var Transporte = (function () {
             S.carga = null;
             if (S.ini) pInicio(); else if (window.CampoAdmin && window.CampoAdmin.activo) window.CampoAdmin.reiniciar(); else arrancar();
           })],
-        atras: function () { /* nada */ }
+        atras: function () {   }
       });
     } catch (e) {
-      try { raiz.textContent = 'Algo falló. Cerrá y volvé a abrir el link.'; } catch (e2) { /* nada */ }
+      try { raiz.textContent = 'Algo falló. Cerrá y volvé a abrir el link.'; } catch (e2) {   }
     }
     setTimeout(function () { fallando = false; }, 1500);
   }
   window.onerror = function () { mostrarFalla(); return true; };
-  window.addEventListener('unhandledrejection', function (e) { try { e.preventDefault(); } catch (x) { /* nada */ } mostrarFalla(); });
-
-  // Para las pantallas de administración (admin.html) y las pruebas.
+  window.addEventListener('unhandledrejection', function (e) { try { e.preventDefault(); } catch (x) {   } mostrarFalla(); });
   window.Campo = {
     el: el, boton: boton, botonAtras: botonAtras, botonSiguiente: botonSiguiente, opcion: opcion, aviso: aviso,
-    pintar: pintar, pCargando: pCargando, llamar: llamar, uuid: uuid, vacio: vacio, mostrarFalla: mostrarFalla,
+    pintar: pintar, pCargando: pCargando, llamar: llamar, uuid: uuid, vacio: vacio, mostrarFalla: mostrarFalla, contacto: contacto,
     estado: function () { return S; }
   };
-
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { try { arrancar(); } catch (e) { mostrarFalla(); } });
   else setTimeout(function () { try { arrancar(); } catch (e) { mostrarFalla(); } }, 0);
 })();
 </script>
 <script>
-/*
- * Pantallas guiadas de administración (DECISIONES #15): ?admin=TOKEN&accion=ID en la web app,
- * #admin=TOKEN&accion=ID en la página estática.
- * Mismo estilo que la app de campo: una pregunta por pantalla, repaso y confirmación.
- * Llama a 'Admin.iniciar' y 'Admin.ejecutar' por Campo.llamar (Transporte).
- */
 (function () {
   'use strict';
   var C = window.Campo;
@@ -2554,33 +2458,25 @@ var Transporte = (function () {
   var el = C.el, boton = C.boton, opcion = C.opcion, aviso = C.aviso, pintar = C.pintar;
   var A = { token: '', accion: '', ini: null, datos: {}, paso: 0, id_envio: '' };
   var ESPERA = 45000;
-
   function d() { return A.ini.datos; }
   function nombre(lista, id, campo) {
     var x = (lista || []).filter(function (r) { return String(r.id) === String(id); })[0];
     return x ? x[campo || 'nombre'] : String(id || '');
   }
   function kg(n) { return Util.kgTexto(n); }
-  // ---- número de silo: los datos salen de los silos que ya mandó Admin.iniciar (sin pedir nada nuevo)
   function silosDe(campo, campania, cultivo) {
     return (d().silos || []).filter(function (s) { return String(s.campo) === String(campo) && String(s.campania) === String(campania) && String(s.cultivo) === String(cultivo); });
   }
-  /** Número de un silo; si la columna está vacía, sale del ID (…-S03), igual que en el servidor. */
   function numeroDeSilo(s) {
     var n = Util.aNumero(s.numero);
     if (n === null) { var m = /-S(\d+)$/.exec(String(s.id || '')); n = m ? Number(m[1]) : 0; }
     return n;
   }
-  /** Mismo cálculo que Servidor.siguienteNumeroSilo: el más alto + 1. */
   function siguienteNumero(campo, campania, cultivo) {
     var max = 0;
     silosDe(campo, campania, cultivo).forEach(function (s) { var n = numeroDeSilo(s); if (n > max) max = n; });
     return max + 1;
   }
-  /**
-   * Revisa el número escrito en el paso 4 de «Nuevo silo».
-   * -> null (está bien o vacío) | {tipo:'error', mensaje, sugerido} | {tipo:'seguro', mensaje, numero, sugerido, clave}
-   */
   function revisarNumeroSilo(x, valor) {
     var v = String(valor === undefined || valor === null ? '' : valor).trim();
     if (!v) return null;
@@ -2599,10 +2495,6 @@ var Transporte = (function () {
     }
     return null;
   }
-  /**
-   * "Silo 1 · Soja 25/26" (DECISIONES #30). La etiqueta ya trae la campaña: solo se agrega si
-   * falta (silos viejos), igual que Alertas.etiquetaSilo, para no mostrar "25/26 (25/26)".
-   */
   function etiquetaConCampania(s) {
     var et = String(s.etiqueta || s.id || '');
     var camp = (d().campanias || []).filter(function (c) { return String(c.id) === String(s.campania); })[0];
@@ -2615,8 +2507,6 @@ var Transporte = (function () {
     var a = (Number(v.nombre.slice(3)) % 100), b = (a + 1) % 100;
     return (a < 10 ? '0' : '') + a + '/' + (b < 10 ? '0' : '') + b;
   }
-
-  // Pasos de cada acción. tipo: elegir | texto | numero. `si(datos)` = se muestra solo si devuelve true.
   var PASOS = {
     nuevo_silo: [
       { id: 'campo', tipo: 'elegir', pregunta: '¿En qué campo?', opciones: function () { return d().campos.map(function (c) { return [c.id, c.nombre]; }); } },
@@ -2650,7 +2540,7 @@ var Transporte = (function () {
     ],
     nueva_persona: [
       { id: 'nombre', tipo: 'texto', pregunta: 'Nombre de la persona' },
-      { id: 'rol', tipo: 'elegir', pregunta: '¿Qué va a hacer?', opciones: function () { return d().roles.map(function (r) { return [r.id, r.nombre, r.acceso === 'link' ? 'Entra con un link al celular' : 'Entra con su mail de Google']; }); } },
+      { id: 'rol', tipo: 'elegir', pregunta: '¿Qué va a hacer?', info: function () { return d().roles_solo_soporte ? 'A alguien de Dirección o de Soporte técnico lo da de alta solo quien mantiene el sistema.' : ''; }, opciones: function () { return d().roles.map(function (r) { return [r.id, r.nombre, r.acceso === 'link' ? 'Entra con un link al celular' : 'Entra con su mail de Google']; }); } },
       { id: 'mail', tipo: 'texto', pregunta: 'Mail de Google', opcional: function (x) { var r = d().roles.filter(function (y) { return y.id === x.rol; })[0]; return !r || r.acceso === 'link'; } }
     ],
     nuevo_link: [
@@ -2682,7 +2572,6 @@ var Transporte = (function () {
   function opcional(p) { return typeof p.opcional === 'function' ? p.opcional(A.datos) : !!p.opcional; }
   function visibles() { return (PASOS[A.accion] || []).filter(function (p) { return !p.si || p.si(A.datos); }); }
   function textoAccion() { var a = A.ini.acciones.filter(function (x) { return x.id === A.accion; })[0]; return a ? a.texto : 'Administración'; }
-
   function arrancar(token, accion) {
     A.token = token; A.accion = accion; A.fija = !!accion; window.CampoAdmin.activo = true;
     C.pCargando('Abriendo…');
@@ -2692,27 +2581,28 @@ var Transporte = (function () {
         return;
       }
       if (!res || !res.ok) {
-        // Página estática: si el sistema dice que el link no sirve, se borra del navegador.
-        if (res && res.motivo === 'link_invalido') { try { if (window.CampoPagina) window.CampoPagina.olvidar(); } catch (e) { /* nada */ } }
-        pintar({ cuerpo: [el('div', { clase: 'marca-grande', texto: '🔒' }), el('h1', { clase: 'centro', texto: (res && res.mensaje) || 'Este link de administración no funciona. Avisale a Julián.' })] });
+        if (res && res.motivo === 'link_invalido') { try { if (window.CampoPagina) window.CampoPagina.olvidar(); } catch (e) {   } }
+        if (res && res.mensaje && res.motivo !== 'link_invalido' && res.tipo !== 'link_invalido') {
+          pintar({ titulo: 'Administración', clase: 'fondo-amarillo', cuerpo: [el('h1', { texto: 'No se pudo abrir' }), el('p', { clase: 'grande', texto: res.mensaje }), boton('Reintentar', 'siguiente', function () { arrancar(token, accion); })] });
+          return;
+        }
+        pintar({ cuerpo: [el('div', { clase: 'marca-grande', texto: '🔒' }), el('h1', { clase: 'centro', texto: (res && res.mensaje) || 'Este link de administración no funciona. Avisale a ' + C.contacto() + '. Si sos ' + C.contacto() + ', avisale a quien mantiene el sistema.' })] });
         return;
       }
-      try { document.title = 'Campo — Administración'; } catch (e) { /* nada */ }
+      try { document.title = 'Campo — Administración'; } catch (e) {   }
       A.ini = res;
       if (A.accion && !A.ini.acciones.some(function (a) { return a.id === A.accion; })) { A.accion = ''; A.fija = false; }
       if (A.fija) empezar(); else pMenu();
     });
   }
   function reiniciar() { arrancar(A.token, A.accion); }
-
-  // La persona sale del token (no se elige en pantalla): solo se la saluda.
   function pMenu() {
     pintar({
       titulo: 'Administración',
       cuerpo: [el('h1', { texto: 'Hola, ' + A.ini.persona.nombre }), el('p', { clase: 'grande', style: 'font-size:23px', texto: '¿Qué querés hacer?' })].concat(A.ini.acciones.map(function (a) {
         return opcion(a.texto, '', false, function () { A.accion = a.id; empezar(); });
-      })).concat(A.ini.acciones.length ? [] : [aviso('amarillo', 'Con este link no hay nada para hacer. Pedíselo a Lucas o a Julián.')]),
-      atras: function () { /* es la primera pantalla */ }
+      })).concat(A.ini.acciones.length ? [] : [aviso('amarillo', 'Con este link no hay nada para hacer.' + (String(A.ini.persona.nombre || '').toLowerCase() === C.contacto().toLowerCase() ? '' : ' Pedíselo a ' + C.contacto() + '.'))]),
+      atras: function () {   }
     });
   }
   function empezar() {
@@ -2722,14 +2612,12 @@ var Transporte = (function () {
     mostrarPaso();
   }
   function volverDesdePrimero() { pMenu(); }
-  /** Deja el valor sugerido (vacío = el siguiente libre lo pone el servidor) y pasa al paso siguiente. */
   function usarSugerido(p) {
     A.datos[p.id] = ''; delete A.datos.salto_confirmado; A.paso++; mostrarPaso();
   }
   function botonSugerido(p, r) {
     return boton('Usar el ' + r.sugerido + ' (el siguiente libre)', 'siguiente', function () { usarSugerido(p); });
   }
-  /** "¿Seguro?" del paso (número que salta el siguiente libre). No es error: si confirma, sigue. */
   function pSeguroPaso(p, r, l) {
     var volver = function () { mostrarPaso(); };
     pintar({
@@ -2768,7 +2656,6 @@ var Transporte = (function () {
       var input = p.largo ? el('textarea', { clase: 'entrada', rows: 4, maxlength: 300 }) : el('input', { clase: 'entrada', type: 'text', autocomplete: 'off', inputmode: p.tipo === 'numero' ? (p.decimal ? 'decimal' : 'numeric') : null });
       input.value = C.vacio(A.datos[p.id]) ? '' : String(A.datos[p.id]);
       cuerpo.push(input);
-      // Aviso en vivo debajo del número (p. ej. "El silo 3 ya existe"): se actualiza mientras escribe.
       var vivo = p.revisar ? el('div', { clase: 'aviso-vivo', 'aria-live': 'polite' }) : null;
       var pintarVivo = function (msg, r) {
         vivo.innerHTML = '';
@@ -2870,14 +2757,12 @@ var Transporte = (function () {
     });
   }
   function reiniciarDatos() {
-    // vuelve a pedir los datos (silos, pedidos) para que la próxima acción vea lo nuevo
     C.pCargando('Un momento…');
     C.llamar('Admin.iniciar', [A.token], 30000, function (err, res) {
       if (!err && res && res.ok) A.ini = res;
       if (A.fija) empezar(); else pMenu();
     });
   }
-
   window.CampoAdmin = { arrancar: arrancar, reiniciar: reiniciar, activo: false };
 })();
 </script>
